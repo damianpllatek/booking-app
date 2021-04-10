@@ -1,0 +1,12 @@
+<h1>test</h1>
+
+<% @pages.each do |page| %>
+  <%= page.id %> <br>
+  <%= byebug %>
+  <%= page.title %> <br>
+  <%= page.content %> <br>
+  <%= page.views %> <br>
+  <%= link_to 'Zobacz', page_path(page.id) %>
+  <hr>
+<% end %>
+
