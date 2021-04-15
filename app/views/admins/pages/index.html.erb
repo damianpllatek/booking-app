@@ -1,1 +1,12 @@
-<h1>podstrona</h1>
+<h1>Panel Admina</h1>
+
+<% @pages.each do |page| %>
+  <%= page.id %> <br>
+  <%= page.title %> <br>
+  <%= page.content %> <br>
+  <%= page.views %> <br>
+  <%= link_to 'Zobacz', page_path(page) %>
+  <%= link_to 'Edytuj', edit_admins_page_path(page) %>
+  <%= link_to 'Usuń', admins_page_path(page), method: :delete %>
+  <hr>
+<% end %>

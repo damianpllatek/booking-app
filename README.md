@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Zadanie:
+1. nawigacja
+2. Panel administatora - nagłówek
+3. Dla bloga to samo co dla admina
+4. Nowe kolumny do bloga i do storny (do tablicy seo_title)

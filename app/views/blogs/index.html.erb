@@ -1,0 +1,10 @@
+<h1>Witaj na blogu</h1>
+
+<% @blogs.each do |blog| %>
+  <%= blog.id %><br>
+  <%= blog.title %><br>
+  <%= blog.content %><br>
+  <%= blog.views %><br>
+  <%= link_to 'Zobacz', blog_path(blog) %>
+  <hr>
+<% end %>

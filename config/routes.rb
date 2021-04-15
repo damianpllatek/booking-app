@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   namespace :admins do
     resources :pages
+    resources :blogs
   end
 
   resources :pages, only: [:index, :show]
+  resources :blogs, only: [:index, :show]
 end
