@@ -13,8 +13,12 @@
 
   <body>
     <%= render 'layouts/admin_navigation' %>
-    <%= yield %>
-    <%= notice %>
-    <%= alert %>
+    <div class="row m-5">
+      <div class="col-9">
+        <%= yield %>
+        <%= notice %>
+        <%= alert %>
+      </div>
+    </div>
   </body>
 </html>
