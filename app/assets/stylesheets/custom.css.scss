@@ -1,2 +1,26 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+.navbar {
+  padding: .5em 5em .5em 5em;
+}
+.navbar-brand,
+.nav-link {
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+.navbar-brand:hover {
+  color:#fff;
+}
+.nav-link:hover {
+  color: rgb(67, 170, 72);
+}
+
+.fa-bars {
+  padding: 10px;
+  font-size: 1.4rem;
+  color: #fff;
+}
