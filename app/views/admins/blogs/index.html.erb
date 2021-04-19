@@ -1,1 +1,12 @@
-<h1>Podstrona bloga</h1>
+<h1>Panel Admina - Blog</h1>
+
+<% @blogs.each do |blog| %>
+  <%= blog.id %><br>
+  <%= blog.title %><br>
+  <%= blog.content %><br>
+  <%= blog.views %><br>
+  <%= link_to 'Zobacz', blog_path(blog) %>
+  <%= link_to 'Edytuj', edit_admins_blog_path(blog) %>
+  <%= link_to 'Usuń', admins_blog_path(blog), method: :delete %>
+  <hr>
+<% end %>

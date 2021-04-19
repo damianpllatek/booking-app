@@ -3,7 +3,7 @@
 module Admins
   class PagesController < ApplicationController
     before_action :find_page, only: [:edit, :update, :destroy]
-    layout "admin"
+    layout 'admin'
 
     def index
       @pages = Page.all
@@ -17,9 +17,9 @@ module Admins
       @page = Page.new(page_params)
 
       if @page.save
-        redirect_to admins_pages_path, notice: "Dodano stronę"
+        redirect_to admins_pages_path, notice: 'Dodano stronę'
       else
-        render :new, alert: "Błąd"
+        render :new, alert: 'Błąd'
       end
     end
 
@@ -27,16 +27,16 @@ module Admins
 
     def update
       if @page.update(page_params)
-        redirect_to admins_pages_path, notice: "Zaktualizowano stronę"
+        redirect_to admins_pages_path, notice: 'Zaktualizowano stronę'
       else
-        render :edit, alert: "Błąd"
+        render :edit, alert: 'Błąd'
       end
     end
 
     def destroy
       @page.destroy
 
-      redirect_to admins_pages_path, notice: "Usunięto stronę"
+      redirect_to admins_pages_path, notice: 'Usunięto stronę'
     end
 
     private
