@@ -1,0 +1,7 @@
+<%= simple_form_for @room, url: [:admins, @room] do |form| %>
+  <%= form.input :name, label: "Nazwa pokoju", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :description, label: "Opis pokoju", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :size, label: "Wielkość pokoju", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :base_price, label: "Cena", input_html: { class: "form-control mb-3" } %>
+  <%= form.button :submit, value: "zapisz", class: "btn btn-primary mt-3" %>
+<% end %>
