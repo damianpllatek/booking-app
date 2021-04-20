@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   namespace :admins do
     resources :pages
     resources :blogs
+    resources :rooms
   end
 
   resources :pages, only: [:index, :show]
   resources :blogs, only: [:index, :show]
+  resources :rooms, only: [:index, :show]
 end

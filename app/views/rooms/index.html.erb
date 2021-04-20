@@ -1,0 +1,11 @@
+<h1>Pokoje</h1>
+
+<% @rooms.each do |room| %>
+  <%= room.id %><br>
+  <%= room.name %><br>
+  <%= room.description %><br>
+  <%= room.size %><br>
+  <%= room.base_price %><br>
+  <%= link_to 'Zobacz', room_path(room) %>
+  <hr>
+<% end %>
