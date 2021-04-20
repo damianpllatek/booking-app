@@ -17,9 +17,11 @@ module Admins
       @blog = Blog.new(blog_params)
 
       if @blog.save
-        redirect_to admins_blogs_path, notice: 'Dodano post'
+        flash[:notice] = 'Post został dodany prawidłowo'
+        redirect_to admins_blogs_path
       else
-        render :new, alert: 'Błąd'
+        flash[:alert] = 'Wystąpił błąd podczas dodawania postu'
+        render :new
       end
     end
 
@@ -27,16 +29,19 @@ module Admins
 
     def update
       if @blog.update(blog_params)
-        redirect_to admins_blogs_path, notice: 'Zaktualizowano post'
+        flash[:notice] = 'Post został zaktualizowany prawidłowo'
+        redirect_to admins_blogs_path
       else
-        render :edit, alert: 'Błąd'
+        flash[:alert] = 'Wystąpił błąd podczas aktualizacji postu'
+        render :edit
       end
     end
 
     def destroy
       @blog.destroy
 
-      redirect_to admins_blogs_path, notice: 'Usunięto post'
+      flash[:alert] = 'Post został usunięty'
+      redirect_to admins_blogs_path
     end
 
     private

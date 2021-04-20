@@ -13,11 +13,10 @@
 
   <body class="body">
     <%= render 'layouts/navigation' %>
+    <%= render 'layouts/messages' %>
     <div class="row m-5">
       <div class="col-9">
         <%= yield %>
-        <%= notice %>
-        <%= alert %>
       </div>
     </div>
     <%= render 'layouts/footer' %>

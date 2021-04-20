@@ -17,9 +17,11 @@ module Admins
       @page = Page.new(page_params)
 
       if @page.save
-        redirect_to admins_pages_path, notice: 'Dodano stronę'
+        flash[:notice] = 'Strona została dodana prawidłowo'
+        redirect_to admins_pages_path
       else
-        render :new, alert: 'Błąd'
+        flash[:alert] = 'Wystąpił błąd podczas dodawania strony'
+        render :new
       end
     end
 
@@ -27,16 +29,19 @@ module Admins
 
     def update
       if @page.update(page_params)
-        redirect_to admins_pages_path, notice: 'Zaktualizowano stronę'
+        flash[:notice] = 'Strona została zaktualizowana prawidłowo'
+        redirect_to admins_pages_path
       else
-        render :edit, alert: 'Błąd'
+        flash[:alert] = 'Wystąpił błąd podczas aktualizacji strony'
+        render :edit
       end
     end
 
     def destroy
       @page.destroy
 
-      redirect_to admins_pages_path, notice: 'Usunięto stronę'
+      flash[:alert] = 'Strona została usunięta'
+      redirect_to admins_pages_path
     end
 
     private
