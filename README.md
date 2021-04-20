@@ -27,7 +27,7 @@ Zadanie:
 1. nawigacja --gotowe
 2. Panel administatora - nagłówek --gotowe
 3. Dla bloga to samo co dla admina --gotowe
-4. Nowe kolumny do bloga i do storny (do tablicy seo_title)
+4. Nowe kolumny do bloga i do storny (do tablicy seo_title) --gotowe
 5. Dodać komunikaty
 6. Poprawić widoki dodanych stron i artykułów
 7. Dodać licznik wyświetleń na blog

@@ -17,13 +17,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
   end
 
-  def run_counter 
-    # Metoda 1
-    # @page.views += 1
-    # @page.save
-
-    # Metoda 2
+  def run_counter
     @page.update(views: @page.views += 1)
-
   end
 end

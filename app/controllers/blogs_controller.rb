@@ -7,11 +7,17 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
   end
 
-  def show; end
+  def show
+    run_counter
+  end
 
   private
 
   def find_blog
     @blog = Blog.find(params[:id])
+  end
+
+  def run_counter
+    @blog.update(views: @blog.views += 1)
   end
 end
