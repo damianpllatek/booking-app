@@ -3,6 +3,7 @@
 <% @pages.each do |page| %>
   <%= page.id %> <br>
   <%= page.title %> <br>
+  <%= page.seo_title %> <br>
   <%= page.content %> <br>
   <%= page.views %> <br>
   <%= link_to 'Zobacz', page_path(page) %>

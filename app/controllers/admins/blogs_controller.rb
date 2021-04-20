@@ -42,7 +42,7 @@ module Admins
     private
 
     def blog_params
-      params.require(:blog).permit(:title, :content, :views)
+      params.require(:blog).permit(:title, :seo_title, :content, :views)
     end
 
     def find_blog

@@ -42,7 +42,7 @@ module Admins
     private
 
     def page_params
-      params.require(:page).permit(:title, :content, :views)
+      params.require(:page).permit(:title, :seo_title, :content, :views)
     end
 
     def find_page

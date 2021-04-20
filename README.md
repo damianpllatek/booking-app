@@ -24,7 +24,11 @@ Things you may want to cover:
 * ...
 
 Zadanie:
-1. nawigacja
-2. Panel administatora - nagłówek
-3. Dla bloga to samo co dla admina
+1. nawigacja --gotowe
+2. Panel administatora - nagłówek --gotowe
+3. Dla bloga to samo co dla admina --gotowe
 4. Nowe kolumny do bloga i do storny (do tablicy seo_title)
+5. Dodać komunikaty
+6. Poprawić widoki dodanych stron i artykułów
+7. Dodać licznik wyświetleń na blog
+8. Zadania od Pawła na GitHub - https://gist.github.com/ptrela/7869d7437a2c0e5520355d4cb146c4ae?fbclid=IwAR0ZXKjQRHVZmI52OcVs3wXH5p9nB7OxYCqd_zojMm69M73BzPr2MoL2uyM
