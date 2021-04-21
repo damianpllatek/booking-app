@@ -1,8 +1,20 @@
 <h1>Kategorie</h1>
 
-<% @categories.each do |category| %>
-  <%= category.id %><br>
-  <%= category.name %><br>
-  <%= link_to 'Zobacz', category_path(category) %>
-  <hr>
-<% end %>
+<table class="table mt-5">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Opcje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <th scope="row"><%= category.id %></th>
+        <td><%= category.name %></td>
+        <td><%= link_to 'Zobacz', category_path(category), class: "btn btn-success" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

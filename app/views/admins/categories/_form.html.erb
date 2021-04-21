@@ -1,0 +1,4 @@
+<%= simple_form_for @category, url: [:admins, @category] do |form| %>
+  <%= form.input :name, label: "Kategoria", input_html: { class: "form-control mb-3" } %>
+  <%= form.button :submit, value: "Zapisz", class: "btn btn-primary mt3" %>
+<% end %>
