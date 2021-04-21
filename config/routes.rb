@@ -8,10 +8,12 @@ Rails.application.routes.draw do
     resources :blogs
     resources :rooms
     resources :categories
+    resources :bookings
   end
 
   resources :pages, only: [:index, :show]
   resources :blogs, only: [:index, :show]
   resources :rooms, only: [:index, :show]
   resources :categories, only: [:index, :show]
+  resources :bookings, only: [:index, :show]
 end
