@@ -7,9 +7,11 @@ Rails.application.routes.draw do
     resources :pages
     resources :blogs
     resources :rooms
+    resources :categories
   end
 
   resources :pages, only: [:index, :show]
   resources :blogs, only: [:index, :show]
   resources :rooms, only: [:index, :show]
+  resources :categories, only: [:index, :show]
 end
