@@ -32,3 +32,5 @@ Zadanie:
 6. Poprawić widoki dodanych stron i artykułów --nie najgorzej
 7. Dodać licznik wyświetleń na blog --gotowe
 8. Zadania od Pawła na GitHub - https://gist.github.com/ptrela/7869d7437a2c0e5520355d4cb146c4ae?fbclid=IwAR0ZXKjQRHVZmI52OcVs3wXH5p9nB7OxYCqd_zojMm69M73BzPr2MoL2uyM
+
+Utworzyć widoki dla admin booking, walidacje i aktualizacja menu

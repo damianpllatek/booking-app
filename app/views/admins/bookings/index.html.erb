@@ -1,0 +1,19 @@
+<h1>Panel Admina - Rezerwacje</h1>
+
+<% @bookings.each do |booking| %>
+  <%= booking.id %><br>
+  <%= booking.start_date %><br>
+  <%= booking.end_date %><br>
+  <%= booking.email %><br>
+  <%= booking.firstname %><br>
+  <%= booking.lastname %><br>
+  <%= booking.street %><br>
+  <%= booking.apartment_number %><br>
+  <%= booking.postcode %><br>
+  <%= booking.city %><br>
+  <%= booking.rodo %><br>
+  <%= booking.price %><br>
+  <%= link_to 'Zobacz', booking_path(booking) %>
+  <%= link_to 'Edytuj', edit_admins_booking_path(booking) %>
+  <%= link_to 'Usuń', admins_booking_path(booking), method: :delete %>
+<% end %>
