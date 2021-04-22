@@ -1,0 +1,14 @@
+<%= simple_form_for @booking, utl: [:admins, @booking] do |form| %>
+  <%= form.input :start_date, label: "Data przyjazdu", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :end_date, label: "Data wyjazdu", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :email, label: "Adres email", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :firstname, label: "Imię", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :lastname, label: "Nazwisko", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :street, label: "Ulica", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :apartment_number, label: "Numer pokoju", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :postcode, label: "Kod pocztowy", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :city, label: "Miasto", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :rodo, label: "RODO", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :price, label: "Cena", input_html: { class: "form-control mb-3" } %>
+  <%= form.button :submit, value: "Zapisz", class: "btn btn-primary mt-3" %>
+<% end %>
