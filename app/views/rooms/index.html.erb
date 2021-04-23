@@ -1,11 +1,19 @@
 <h1>Pokoje</h1>
 
-<% @rooms.each do |room| %>
-  <%= room.id %><br>
-  <%= room.name %><br>
-  <%= room.description %><br>
-  <%= room.size %><br>
-  <%= room.base_price %><br>
-  <%= link_to 'Zobacz', room_path(room) %>
-  <hr>
-<% end %>
+
+<div class="row mt-3">
+  <% @rooms.each do |room| %>
+    <div class="col-sm-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Apartament <%= room.name %></h5>
+          <p>Id #<%= room.id %><br></p>
+          <p class="card-text"><%= room.description %></p>
+          <p class="card-text">Wielkość: <%= room.size %></p>
+          <p class="card-text">Cena: <%= room.base_price %></p>
+          <%= link_to 'Zobacz', room_path(room), class: "btn btn-success" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div> 

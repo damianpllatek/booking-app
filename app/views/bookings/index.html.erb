@@ -1,18 +1,26 @@
 <h1>Rezerwacje</h1>
 
 <% @bookings.each do |booking| %>
-  <%= booking.id %><br>
-  <%= booking.start_date %><br>
-  <%= booking.end_date %><br>
-  <%= booking.email %><br>
-  <%= booking.firstname %><br>
-  <%= booking.lastname %><br>
-  <%= booking.street %><br>
-  <%= booking.apartment_number %><br>
-  <%= booking.postcode %><br>
-  <%= booking.city %><br>
-  <%= booking.rodo %><br>
-  <%= booking.price %><br>
-  <%= link_to 'Zobacz', booking_path(booking) %>
-  <hr>
+  <div class="card text-center mb-3">
+    <div class="card-header">
+      Rezerwacja # <%= booking.id %><br>
+    </div>
+    <div class="card-body">
+      <p class="card-text">Data przyjazdu: <%= booking.start_date %><br></p>
+      <p class="card-text">Data wyjazdu: <%= booking.end_date %><br></p>
+      <p class="card-text">Adres email: <%= booking.email%><br></p>
+      <p class="card-text">Imię: <%= booking.firstname %><br></p>
+      <p class="card-text">Nazwisko: <%= booking.lastname %><br></p>
+      <p class="card-text">Ulica: <%= booking.street %><br></p>
+      <p class="card-text">Numer apartamentu: <%= booking.apartment_number %><br></p>
+      <p class="card-text">Kod pocztowy: <%= booking.postcode %><br></p>
+      <p class="card-text">Miasto: <%= booking.city %><br></p>
+      <p class="card-text">Rodo <%= booking.rodo%><br></p>
+      <p class="card-text">Cena: <%= booking.price%><br></p>
+      <%= link_to 'Zobacz', booking_path(booking), class: "btn btn-success" %>
+    </div>
+    <div class="card-footer text-muted mb-3">
+      Data dodania
+    </div>
+  </div>
 <% end %>

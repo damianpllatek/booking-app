@@ -1,11 +1,19 @@
 <h1>Witaj na blogu</h1>
 
 <% @blogs.each do |blog| %>
-  <%= blog.id %><br>
-  <%= blog.title %><br>
-  <%= blog.seo_title %><br>
-  <%= blog.content %><br>
-  <%= blog.views %><br>
-  <%= link_to 'Zobacz', blog_path(blog) %>
-  <hr>
+  <div class="card text-center mt-3">
+    <div class="card-header">
+      Blog # <%= blog.id %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= blog.title %></h5>
+      <h6 class="card-title"><%= blog.seo_title %></h6>
+      <p class="card-text"><%= blog.content %></p>
+      <p class="card-text">Wyświetlenia: <%= blog.views %></p>
+      <%= link_to 'Zobacz', blog_path(blog), class: "btn btn-success" %>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
 <% end %>

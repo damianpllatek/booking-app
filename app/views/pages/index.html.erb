@@ -1,11 +1,18 @@
 <h1>Strony</h1>
 
 <% @pages.each do |page| %>
-  <%= page.id %> <br>
-  <%= page.title %> <br>
-  <%= page.seo_title %> <br>
-  <%= page.content %> <br>
-  <%= page.views %> <br>
-  <%= link_to 'Zobacz', page_path(page) %>
-  <hr>
+  <div class="card text-center mb-3">
+    <div class="card-header">
+      Strona # <%= page.id %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= page.title %></h5>
+      <h6 class="card-title"><%= page.seo_title %></h6>
+      <p class="card-text"><%= page.content %></p>
+      <%= link_to 'Zobacz', page_path(page), class: "btn btn-success" %>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
 <% end %>
