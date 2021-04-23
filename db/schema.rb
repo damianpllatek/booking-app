@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_21_180229) do
+ActiveRecord::Schema.define(version: 2021_04_23_075203) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2021_04_21_180229) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.string "start_date"
-    t.string "end_date"
+    t.date "start_date"
+    t.date "end_date"
     t.string "email"
     t.string "firstname"
     t.string "lastname"
