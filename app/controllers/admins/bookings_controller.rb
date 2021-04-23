@@ -47,8 +47,8 @@ module Admins
     private
 
     def booking_params
-      params.require(:booking).permit(:start_date, :end_date, :email, :firstname, :lastname, :street, 
-                                      :apartment_number, :postcode, :city, :rodo, :price)
+      params.require(:booking).permit(:start_date, :end_date, :email, :firstname, :lastname, :street, :apartment_number,
+                                      :postcode, :city, :rodo, :price)
     end
 
     def find_booking

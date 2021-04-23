@@ -1,4 +1,4 @@
-<%= simple_form_for @booking, utl: [:admins, @booking] do |form| %>
+<%= simple_form_for @booking, url: [:admins, @booking] do |form| %>
   <%= form.input :start_date, label: "Data przyjazdu", input_html: { class: "form-control mb-3" } %>
   <%= form.input :end_date, label: "Data wyjazdu", input_html: { class: "form-control mb-3" } %>
   <%= form.input :email, label: "Adres email", input_html: { class: "form-control mb-3" } %>
