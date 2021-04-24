@@ -5,6 +5,8 @@ module Admins
     before_action :find_room, only: [:edit, :update, :destroy]
     layout 'admin'
 
+    access admin: :all
+
     def index
       @rooms = Room.all
     end

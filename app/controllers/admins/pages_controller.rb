@@ -5,6 +5,8 @@ module Admins
     before_action :find_page, only: [:edit, :update, :destroy]
     layout 'admin'
 
+    access admin: :all
+
     def index
       @pages = Page.all
     end

@@ -5,6 +5,8 @@ module Admins
     before_action :find_blog, only: [:edit, :update, :destroy]
     layout 'admin'
 
+    access admin: :all
+
     def index
       @blogs = Blog.all
     end
