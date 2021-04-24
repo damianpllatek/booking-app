@@ -9,6 +9,7 @@
       <h5 class="card-title"><%= page.title %></h5>
       <h6 class="card-title"><%= page.seo_title %></h6>
       <p class="card-text"><%= page.content %></p>
+      <p class="card-text">Wyświetlenia: <%= page.views %></p>
       <%= link_to 'Zobacz', page_path(page), class: "btn btn-success" %>
       <%= link_to 'Edytuj', edit_admins_page_path(page), class: "btn btn-primary" %>
       <%= link_to 'Usuń', admins_page_path(page), class: "btn btn-danger", method: :delete %>
