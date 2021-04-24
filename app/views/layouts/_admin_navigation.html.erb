@@ -54,7 +54,9 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <%= link_to 'User window', pages_path, class: "btn btn-success mr-2"%>
-      <%= link_to 'Log out', destroy_user_session_path, class: "btn btn-danger mr-2",  method: :delete %>
+      <% if user_signed_in? %>
+        <%= link_to 'Log out', destroy_user_session_path, class: "btn btn-danger mr-2",  method: :delete %>
+      <% end %>
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>

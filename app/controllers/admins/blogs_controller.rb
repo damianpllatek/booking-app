@@ -13,6 +13,8 @@ module Admins
 
     def new
       @blog = Blog.new
+      @categories = Category.all.pluck(:name, :id)
+      # [[1, "abc"], [2, "def"]]
     end
 
     def create
@@ -27,7 +29,9 @@ module Admins
       end
     end
 
-    def edit; end
+    def edit
+      @categories = Category.all.pluck(:name, :id)
+    end
 
     def update
       if @blog.update(blog_params)
@@ -49,7 +53,7 @@ module Admins
     private
 
     def blog_params
-      params.require(:blog).permit(:title, :seo_title, :content, :views)
+      params.require(:blog).permit(:title, :seo_title, :content, :category_id, :views)
     end
 
     def find_blog
