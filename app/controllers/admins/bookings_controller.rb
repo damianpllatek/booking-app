@@ -5,6 +5,8 @@ module Admins
     before_action :find_booking, only: [:edit, :update, :destroy]
     layout 'admin'
 
+    access admin: :all
+
     def index
       @bookings = Booking.all
     end

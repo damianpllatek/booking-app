@@ -5,6 +5,8 @@ module Admins
     before_action :find_category, only: [:edit, :update, :destroy]
     layout 'admin'
 
+    access admin: :all
+
     def index
       @categories = Category.all
     end
