@@ -19,11 +19,9 @@ module Admins
       @page = Page.new(page_params)
 
       if @page.save
-        flash[:notice] = 'Strona została dodana prawidłowo'
-        redirect_to admins_pages_path
+        redirect_to admins_pages_path, notice: 'Strona została dodana prawidłowo'
       else
-        flash[:alert] = 'Wystąpił błąd podczas dodawania strony'
-        render :new
+        render :new, alert: 'Wystąpił błąd podczas dodawania strony'
       end
     end
 
@@ -31,19 +29,16 @@ module Admins
 
     def update
       if @page.update(page_params)
-        flash[:notice] = 'Strona została zaktualizowana prawidłowo'
-        redirect_to admins_pages_path
+        redirect_to admins_pages_path, notice: 'Strona została zaktualizowana prawidłowo'
       else
-        flash[:alert] = 'Wystąpił błąd podczas aktualizacji strony'
-        render :edit
+        render :edit, alert: 'Wystąpił błąd podczas aktualizacji strony'
       end
     end
 
     def destroy
       @page.destroy
 
-      flash[:alert] = 'Strona została usunięta'
-      redirect_to admins_pages_path
+      redirect_to admins_pages_path, alert: 'Strona została usunięta'
     end
 
     private
