@@ -39,7 +39,7 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 
 ---------------------------------------------------
 
-1. poprawić notice i alert
+1. poprawić notice i alert -- dorobić bootstrapowy layout
 2. Zrobic widoki dla devise (logowanie itd.)
 3. Ogarnąć devise scope
 4. Dodać w widoku blogu żeby wyświetlało kategorię

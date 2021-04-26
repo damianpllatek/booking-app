@@ -55,3 +55,20 @@
   color: #fff;
   background-color: #343a40;
 }
+
+.message-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-text {
+  margin: 0 30px;
+  align-items: center;
+}
+
+.fa-times {
+  font-size: 22px;
+  background: none;
+  border: none;
+}
