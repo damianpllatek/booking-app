@@ -1,18 +1,18 @@
-<h2>Resend unlock instructions</h2>
+<h2 class="mb-5">Resend unlock instructions</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
   <%= f.full_error :unlock_token %>
 
-  <div class="form-inputs">
+  <div class="form-inputs form-group mb-3">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" } %>
+                input_html: { autocomplete: "email", class: "form-control mb-3" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Resend unlock instructions" %>
+  <div class="form-actions mb-3">
+    <%= f.button :submit, "Resend unlock instructions", class: "btn btn-primary" %>
   </div>
 <% end %>
 
