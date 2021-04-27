@@ -7,17 +7,18 @@
       Rezerwacja # <%= booking.id %><br>
     </div>
     <div class="card-body">
-      <p class="card-text">Data przyjazdu: <%= booking.start_date %><br></p>
-      <p class="card-text">Data wyjazdu: <%= booking.end_date %><br></p>
-      <p class="card-text">Adres email: <%= booking.email%><br></p>
-      <p class="card-text">Imię: <%= booking.firstname %><br></p>
-      <p class="card-text">Nazwisko: <%= booking.lastname %><br></p>
-      <p class="card-text">Ulica: <%= booking.street %><br></p>
-      <p class="card-text">Numer apartamentu: <%= booking.apartment_number %><br></p>
-      <p class="card-text">Kod pocztowy: <%= booking.postcode %><br></p>
-      <p class="card-text">Miasto: <%= booking.city %><br></p>
-      <p class="card-text">Rodo <%= booking.rodo%><br></p>
-      <p class="card-text">Cena: <%= booking.price%><br></p>
+      <p class="card-text">Nazwa pokoju: <%= booking.room.name %></p>
+      <p class="card-text">Data przyjazdu: <%= booking.start_date %></p>
+      <p class="card-text">Data wyjazdu: <%= booking.end_date %></p>
+      <p class="card-text">Adres email: <%= booking.email%></p>
+      <p class="card-text">Imię: <%= booking.firstname %></p>
+      <p class="card-text">Nazwisko: <%= booking.lastname %></p>
+      <p class="card-text">Ulica: <%= booking.street %></p>
+      <p class="card-text">Numer apartamentu: <%= booking.apartment_number %></p>
+      <p class="card-text">Kod pocztowy: <%= booking.postcode %></p>
+      <p class="card-text">Miasto: <%= booking.city %></p>
+      <p class="card-text">Rodo <%= booking.rodo %></p>
+      <p class="card-text">Cena: <%= booking.price %></p>
       <%= link_to 'Zobacz', booking_path(booking), class: "btn btn-success" %>
       <%= link_to 'Edytuj', edit_admins_booking_path(booking), class: "btn btn-primary" %>
       <%= link_to 'Usuń', admins_booking_path(booking), class: "btn btn-danger", method: :delete %>
