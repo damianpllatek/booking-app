@@ -10,6 +10,7 @@
       <h6 class="card-title"><%= blog.seo_title %></h6>
       <p class="card-text"><%= blog.content %></p>
       <p class="card-text">Wyświetlenia: <%= blog.views %></p>
+      <p class="card-text">Kategoria: <%= blog.category.name %></p>
       <%= link_to 'Zobacz', blog_path(blog), class: "btn btn-success" %>
       <%= link_to 'Edytuj', edit_admins_blog_path(blog), class: "btn btn-primary" %>
       <%= link_to 'Usuń', admins_blog_path(blog), class: "btn btn-danger", method: :delete %>
