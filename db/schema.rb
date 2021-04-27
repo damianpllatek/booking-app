@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_142204) do
+ActiveRecord::Schema.define(version: 2021_04_27_154355) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -20,7 +20,9 @@ ActiveRecord::Schema.define(version: 2021_04_27_142204) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "seo_title"
     t.integer "category_id", null: false
+    t.integer "user_id", null: false
     t.index ["category_id"], name: "index_blogs_on_category_id"
+    t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -79,5 +81,6 @@ ActiveRecord::Schema.define(version: 2021_04_27_142204) do
   end
 
   add_foreign_key "blogs", "categories"
+  add_foreign_key "blogs", "users"
   add_foreign_key "bookings", "rooms"
 end

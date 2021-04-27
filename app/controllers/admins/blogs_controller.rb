@@ -4,6 +4,7 @@ module Admins
   class BlogsController < ApplicationController
     before_action :find_blog, only: [:edit, :update, :destroy]
     before_action :find_category, only: [:new, :edit]
+    before_action :find_user, only: [:new, :edit]
     layout 'admin'
 
     access admin: :all
@@ -45,7 +46,7 @@ module Admins
     private
 
     def blog_params
-      params.require(:blog).permit(:title, :seo_title, :content, :category_id, :views)
+      params.require(:blog).permit(:title, :seo_title, :content, :category_id, :user_id, :views)
     end
 
     def find_blog
@@ -54,6 +55,10 @@ module Admins
 
     def find_category
       @categories = Category.all.pluck(:name, :id)
+    end
+
+    def find_user
+      @users = User.all.pluck(:email, :id)
     end
   end
 end
