@@ -3,6 +3,7 @@
 module Admins
   class BlogsController < ApplicationController
     before_action :find_blog, only: [:edit, :update, :destroy]
+    before_action :find_category, only: [:new, :edit]
     layout 'admin'
 
     access admin: :all
@@ -13,8 +14,6 @@ module Admins
 
     def new
       @blog = Blog.new
-      @categories = Category.all.pluck(:name, :id)
-      # [[1, "abc"], [2, "def"]]
     end
 
     def create
@@ -27,9 +26,7 @@ module Admins
       end
     end
 
-    def edit
-      @categories = Category.all.pluck(:name, :id)
-    end
+    def edit; end
 
     def update
       if @blog.update(blog_params)
@@ -53,6 +50,10 @@ module Admins
 
     def find_blog
       @blog = Blog.find(params[:id])
+    end
+
+    def find_category
+      @categories = Category.all.pluck(:name, :id)
     end
   end
 end
