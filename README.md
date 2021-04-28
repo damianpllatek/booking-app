@@ -49,3 +49,9 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 8. Dodać to co wyżęj do widoków. --gotowe
 9. Usunąć komentarz z brancah 002 --gotowe
 10. mergowac całość
+
+----------------------------------------------------
+
+1. dodać name do tabeli usera
+2. Date w rezerwacji zmienić na "data picker" (znaleźć w google)
+3. zainstalowanie carierwave na AWS

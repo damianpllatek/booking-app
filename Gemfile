@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby '2.7.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 
 # custom gems
+gem 'carrierwave'
 gem 'devise'
 gem 'petergate'
 gem 'simple_form'
