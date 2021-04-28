@@ -3,7 +3,7 @@
 module Admins
   class BookingsController < ApplicationController
     before_action :find_booking, only: [:edit, :update, :destroy]
-    before_action :find_room, only: [:new, :edit]
+    before_action :find_rooms, only: [:new, :edit]
     layout 'admin'
 
     access admin: :all
@@ -53,7 +53,7 @@ module Admins
       @booking = Booking.find(params[:id])
     end
 
-    def find_room
+    def find_rooms
       @rooms = Room.all.pluck(:name, :id)
     end
   end
