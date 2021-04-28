@@ -3,6 +3,7 @@
 module Admins
   class BookingsController < ApplicationController
     before_action :find_booking, only: [:edit, :update, :destroy]
+    before_action :find_room, only: [:new, :edit]
     layout 'admin'
 
     access admin: :all
@@ -44,12 +45,16 @@ module Admins
     private
 
     def booking_params
-      params.require(:booking).permit(:start_date, :end_date, :email, :firstname, :lastname, :street, :apartment_number,
-                                      :postcode, :city, :rodo, :price)
+      params.require(:booking).permit(:room_id, :start_date, :end_date, :email, :firstname, :lastname, :street,
+                                      :apartment_number, :postcode, :city, :rodo, :price)
     end
 
     def find_booking
       @booking = Booking.find(params[:id])
+    end
+
+    def find_room
+      @rooms = Room.all.pluck(:name, :id)
     end
   end
 end
