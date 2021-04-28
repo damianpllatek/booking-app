@@ -43,7 +43,7 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 2. Zrobic widoki dla devise (logowanie itd.) --gotowe
 3. Ogarnąć devise scope
 4. Dodać w widoku blogu żeby wyświetlało kategorię --gotowe
-5. w blogs_controller zrobić zmienną w provate + before action dla new i edit
+5. w blogs_controller zrobić zmienną w provate + before action dla new i edit --gotowe
 6. Dodać kolejną relację dla rezerwacje i pokoje (rezerwacja musi mieć room_id)
 7. Relacja dla bloga i usera (blog musi mieć user id)
 8. Dodać to co wyżęj do widoków.
