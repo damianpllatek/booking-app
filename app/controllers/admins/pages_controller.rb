@@ -8,7 +8,7 @@ module Admins
     access admin: :all
 
     def index
-      @pages = Page.all
+      @pages = Page.all.reverse
     end
 
     def new
@@ -44,7 +44,7 @@ module Admins
     private
 
     def page_params
-      params.require(:page).permit(:title, :seo_title, :content, :views, :photo)
+      params.require(:page).permit(:title, :seo_title, :content, :photo)
     end
 
     def find_page
