@@ -1,3 +1,8 @@
-<h1>Dodaj nowy post</h1>
+<div class="heading-bg">
+  <h1 class="heading-title">Dodaj nowy artykuł</h1>
+  <%= link_to 'Wstecz', admins_blogs_path, class: "btn btn-light" %>
+</div>
 
-<%= render 'form' %>
+<div class="admin-content-new">
+  <%= render 'form' %>
+</div>
