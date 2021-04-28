@@ -12,6 +12,69 @@
   height: 100%;
   width: 100%;
 }
+
+//---------- ADMIN NAVIGATION -----------//
+
+.admin-body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.admin-container {
+  width: 100%;
+  height: auto;
+}
+
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 26px;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.admin-bars {
+  color: red !important;
+}
+
+.admin-nav {
+  position: fixed;
+  top: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(-100%);
+  background-color: #343a40;
+  z-index: 900;
+
+  &--active {
+    transform: translateX(0);
+  }
+}
+
+.admin-nav-item {
+  position: relative;
+  display: block;
+  margin: 50px 20px;
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.admin-nav-item:hover {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+//---------- USER NAVIGATION -----------//
 .navbar {
   padding: .5em 4em .5em 4em;
 }
@@ -71,4 +134,119 @@
   font-size: 22px;
   background: none;
   border: none;
+}
+
+//---------- MEDIA -----------//
+
+@media (min-width: 992px) {
+
+  .admin-body {
+    width: 100%;
+  }
+  .admin-container {
+    width: 80%;
+    height: auto;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .admin-nav-box {
+    position: sticky;
+    top:0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #343a40;
+  }
+
+  .admin-nav {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(0);
+    z-index: 950;
+  }
+
+  .nav-brand {
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-brand-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .nav-brand-text:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .admin-panel-txt {
+    margin-top: 10px;
+    color: #fff;
+  }
+
+  .nav-items {
+    width: 100%;
+    text-align: center;
+  }
+  .admin-nav-item {
+    display: block;
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .admin-nav-item:hover {
+    background-color: #2c3035;
+    transition: background-color .3s;
+  }
+
+  .nav-actions {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .heading-bg {
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #343a40;
+    background-color: #2bc9bc;
+  }
+
+  .admin-content {
+    margin: 20px;
+  }
+
+  .admin-content-new,
+  .admin-content-edit {
+    margin: 20px 100px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .admin-container {
+    width: 85%;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .admin-nav-box {
+    width: 15%;
+  }
 }

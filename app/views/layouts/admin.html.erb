@@ -11,14 +11,25 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="body">
-    <%= render 'layouts/admin_navigation' %>
-    <%= render 'layouts/messages' %>
-    <div class="row m-5">
-      <div class="col-9 mb-5">
-        <%= yield %>
-      </div>
+  <body class="admin-body">
+    <%= render 'layouts/admin_nav' %>
+
+    <div class="admin-container">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
     </div>
-    <%= render 'layouts/footer' %>
+    <%#= render 'layouts/footer' %>
+
+  <script>
+      // //--- NAVIGATION
+      // const nav = document.querySelectorAll('.admin-nav')
+      // const navBtn = document.querySelectorAll('.burger-btn')
+      //
+      // const handleNav = () => {
+      //     nav.classList.toggle('admin-nav--active')
+      // }
+      //
+      // navBtn.addEventListener('click', handleNav)
+  </script>
   </body>
 </html>

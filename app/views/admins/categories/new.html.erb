@@ -1,3 +1,8 @@
-<h1>Dodaj nową kategorię</h1>
+<div class="heading-bg">
+  <h1 class="heading-title">Dodaj nową kategorię</h1>
+  <%= link_to 'Wstecz', admins_categories_path, class: "btn btn-light" %>
+</div>
 
-<%= render 'form' %>
+<div class="admin-content-new">
+  <%= render 'form' %>
+</div>

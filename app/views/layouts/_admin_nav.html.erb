@@ -1,0 +1,24 @@
+<div class="admin-nav-box">
+  <button class="burger-btn" aria-label="Menu button">
+    <i class="fas fa-bars admin-bars"></i>
+  </button>
+  <nav class="admin-nav">
+    <div class="nav-brand">
+      <%= link_to 'BookingApp', admins_pages_path, class: "nav-brand-text" %>
+      <p class="admin-panel-txt">Admin Panel</p>
+    </div>
+    <div class="nav-items">
+      <%= link_to 'Strony', admins_pages_path, class: "admin-nav-item" %>
+      <%= link_to 'Artykuły', admins_blogs_path, class: "admin-nav-item" %>
+      <%= link_to 'Kategorie', admins_categories_path, class: "admin-nav-item" %>
+      <%= link_to 'Pokoje', admins_rooms_path, class: "admin-nav-item" %>
+      <%= link_to 'Rezerwacje', admins_bookings_path, class: "admin-nav-item" %>
+    </div>
+    <div class="nav-actions">
+      <%= link_to 'User window', pages_path, class: "btn btn-success mb-2"%>
+      <% if user_signed_in? %>
+        <%= link_to 'Log out', destroy_user_session_path, class: "btn btn-danger mt-2",  method: :delete %>
+      <% end %>
+    </div>
+  </nav>
+</div>
