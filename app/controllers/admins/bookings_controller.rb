@@ -19,11 +19,9 @@ module Admins
       @booking = Booking.new(booking_params)
 
       if @booking.save
-        flash[:notice] = 'Rezerwacja została utworzona prawidłowo'
-        redirect_to admins_bookings_path
+        redirect_to admins_bookings_path, notice: 'Rezerwacja została utworzona prawidłowo'
       else
-        flash[:alert] = 'Wystąpił błąd podczas tworzenia rezerwacji'
-        render :new
+        render :new, alert: 'Wystąpił błąd podczas tworzenia rezerwacji'
       end
     end
 
@@ -31,19 +29,16 @@ module Admins
 
     def update
       if @booking.update(booking_params)
-        flash[:notice] = 'Rezerwacja została zaktualizowana prawidłowo'
-        redirect_to admins_bookings_path
+        redirect_to admins_bookings_path, notice: 'Rezerwacja została zaktualizowana prawidłowo'
       else
-        flash[:alert] = 'Wystąpił błąd podczas aktualizowania rezerwacji'
-        render :edit
+        render :edit, alert: 'Wystąpił błąd podczas aktualizowania rezerwacji'
       end
     end
 
     def destroy
       @booking.destroy
 
-      flash[:alert] = 'Rezerwacja została usunięta'
-      redirect_to admins_booking_path
+      redirect_to admins_booking_path, alert: 'Rezerwacja została usunięta'
     end
 
     private

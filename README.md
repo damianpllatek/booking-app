@@ -40,3 +40,12 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 ---------------------------------------------------
 
 1. poprawić notice i alert
+2. Zrobic widoki dla devise (logowanie itd.)
+3. Ogarnąć devise scope
+4. Dodać w widoku blogu żeby wyświetlało kategorię
+5. w blogs_controller zrobić zmienną w provate + before action dla new i edit
+6. Dodać kolejną relację dla rezerwacje i pokoje (rezerwacja musi mieć room_id)
+7. Relacja dla bloga i usera (blog musi mieć user id)
+8. Dodać to co wyżęj do widoków.
+9. Usunąć komentarz z brancah 002
+10. mergowac całość

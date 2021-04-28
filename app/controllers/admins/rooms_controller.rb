@@ -19,11 +19,9 @@ module Admins
       @room = Room.new(room_params)
 
       if @room.save
-        flash[:notice] = 'Pokój został dodany prawidłowo'
-        redirect_to admins_rooms_path
+        redirect_to admins_rooms_path, notice: 'Pokój został dodany prawidłowo'
       else
-        flash[:alert] = 'Wystąpił błąd podczas dodawania pokoju'
-        render :new
+        render :new, alert: 'Wystąpił błąd podczas dodawania pokoju'
       end
     end
 
@@ -31,19 +29,16 @@ module Admins
 
     def update
       if @room.update(room_params)
-        flash[:notice] = 'Pokój został zaktualizowany prawidłowo'
-        redirect_to admins_rooms_path
+        redirect_to admins_rooms_path, notice: 'Pokój został zaktualizowany prawidłowo'
       else
-        flash[:alert] = 'Wystąpił błąd podczas aktualizowania pokoju'
-        render :edit
+        render :edit, alert: 'Wystąpił błąd podczas aktualizowania pokoju'
       end
     end
 
     def destroy
       @room.destroy
 
-      flash[:alert] = 'Pokój został usunięty'
-      redirect_to admins_rooms_path
+      redirect_to admins_rooms_path, alert: 'Pokój został usunięty'
     end
 
     private

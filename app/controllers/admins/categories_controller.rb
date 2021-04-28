@@ -19,11 +19,9 @@ module Admins
       @category = Category.new(category_params)
 
       if @category.save
-        flash[:notice] = 'Kategoria została utworzona prawidłowo'
-        redirect_to admins_categories_path
+        redirect_to admins_categories_path, notice: 'Kategoria została utworzona prawidłowo'
       else
-        flash[:alert] = 'Wystąłpił błąd podczas dodawania kategorii'
-        render :new
+        render :new, alert: 'Wystąłpił błąd podczas dodawania kategorii'
       end
     end
 
@@ -31,19 +29,16 @@ module Admins
 
     def update
       if @category.update(category_params)
-        flash[:notice] = 'Kategoria została zaktualizowana prawidłowo'
-        redirect_to admins_categories_path
+        redirect_to admins_categories_path, notice: 'Kategoria została zaktualizowana prawidłowo'
       else
-        flash[:alert] = 'Wystąpił błąd podczas aktualizowania kategorii'
-        render :edit
+        render :edit, alert: 'Wystąpił błąd podczas aktualizowania kategorii'
       end
     end
 
     def destroy
       @category.destroy
 
-      flash[:alert] = 'Kategoria została usunięta'
-      redirect_to admins_categories_path
+      redirect_to admins_categories_path, alert: 'Kategoria została usunięta'
     end
 
     def category_params
