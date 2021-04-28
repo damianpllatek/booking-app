@@ -45,7 +45,7 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 4. Dodać w widoku blogu żeby wyświetlało kategorię --gotowe
 5. w blogs_controller zrobić zmienną w provate + before action dla new i edit --gotowe
 6. Dodać kolejną relację dla rezerwacje i pokoje (rezerwacja musi mieć room_id) --gotowe
-7. Relacja dla bloga i usera (blog musi mieć user id)
+7. Relacja dla bloga i usera (blog musi mieć user id) --gotowe
 8. Dodać to co wyżęj do widoków. --gotowe
-9. Usunąć komentarz z brancah 002
+9. Usunąć komentarz z brancah 002 --gotowe
 10. mergowac całość
