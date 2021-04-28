@@ -1,19 +1,19 @@
-<h2>Resend confirmation instructions</h2>
+<h2 class="mb-5">Resend confirmation instructions</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
   <%= f.full_error :confirmation_token %>
 
-  <div class="form-inputs">
+  <div class="form-inputs form-group mb-3">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
                 value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
-                input_html: { autocomplete: "email" } %>
+                input_html: { autocomplete: "email", class: "form-control mb-3" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Resend confirmation instructions" %>
+  <div class="form-actions mb-3">
+    <%= f.button :submit, "Resend confirmation instructions", class: "btn btn-primary" %>
   </div>
 <% end %>
 
