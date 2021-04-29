@@ -15,7 +15,11 @@ Rails.application.routes.draw do
 
   namespace :admins do
     resources :pages
-    resources :blogs
+    resources :blogs do
+      collection do
+        get :test
+      end
+    end
     resources :rooms
     resources :categories
     resources :bookings
