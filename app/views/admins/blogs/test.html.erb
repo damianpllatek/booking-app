@@ -1,0 +1,11 @@
+<% @blogs.each do |blog| %>
+  <%= blog.title %>, <%= blog.category.name %><br>
+<% end %>
+
+<%#= @cars.specialoffer(true) %>
+<%#= @cars.where(specialoffer: true) %>
+
+<!--scope :brand, -> (brand) { where brand: brand }-->
+<!--scope :car_model, -> (car_model) { where car_model: car_model }-->
+<!--scope :category, -> (category) { where category: category }-->
+<!--scope :specialoffer, -> (specialoffer) { where(specialoffer: specialoffer) }-->

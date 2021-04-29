@@ -2,6 +2,6 @@
   <%= form.input :title, label: "Tytuł", input_html: { class: "form-control mb-3" } %>
   <%= form.input :seo_title, label: "Tytuł SEO", input_html: { class: "form-control mb-3" } %>
   <%= form.input :content, label: "Treść", input_html: { class: "form-control mb-3" } %>
-  <%= form.input :views, label: "Wyświetlenia", input_html: { class: "form-control mb-3" } %>
+  <%= form.input :photo, as: :file, label: "Zdjęcie", input_html: { class: "form-control mb-3" } %>
   <%= form.button :submit, value: "Zapisz", class: "btn btn-primary mt-3" %>
 <% end %>

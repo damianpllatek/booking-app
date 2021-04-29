@@ -43,6 +43,10 @@ module Admins
       redirect_to admins_blogs_path, alert: 'Post został usunięty'
     end
 
+    def test
+      @blogs = Blog.first_scope
+    end
+
     private
 
     def blog_params
