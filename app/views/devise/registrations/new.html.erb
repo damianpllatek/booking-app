@@ -4,6 +4,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs form-group mb-3">
+    <%= f.input :name, required: true,
+                autofocus: true,
+                input_html: { autocomplete: "username", class: "form-control mb-3" }%>
     <%= f.input :email, required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email", class: "form-control mb-3" }%>
