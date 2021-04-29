@@ -66,3 +66,5 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
     Zrobić 2x scope nazywające się published i unpublished. Mają znajdywać się w modelu page i w panelu admina zrobić 2 podstrony published i unpublished.
     Na postronie published ma byc tylko scope @pages = Page.published. W metodzie unpublished @pages = Page.unpublished. (będzie select z wyborem opublikowane czy nie).
 12. WIdoki ogarnąć ze zdjęciami
+13. Paginacja na stronach
+14. Gem zmieniający id na nazwy https://github.com/norman/friendly_id   (jak się nie uda to następnym razem)
