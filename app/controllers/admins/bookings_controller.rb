@@ -9,7 +9,7 @@ module Admins
     access admin: :all
 
     def index
-      @bookings = Booking.all
+      @bookings = Booking.all.reverse
     end
 
     def new

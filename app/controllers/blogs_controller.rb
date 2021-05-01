@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   before_action :find_blog, only: [:show]
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.reverse
   end
 
   def show

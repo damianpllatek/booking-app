@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   before_action :find_page, only: [:show]
 
   def index
-    @pages = Page.all
+    @pages = Page.all.reverse
   end
 
   def show
