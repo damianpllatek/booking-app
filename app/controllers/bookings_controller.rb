@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   before_action :find_booking, only: [:show]
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.all.reverse
   end
 
   def show; end

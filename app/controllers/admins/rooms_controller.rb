@@ -8,7 +8,7 @@ module Admins
     access admin: :all
 
     def index
-      @rooms = Room.all
+      @rooms = Room.all.reverse
     end
 
     def new

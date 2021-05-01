@@ -4,7 +4,7 @@ class RoomsController < ApplicationController
   before_action :find_room, only: [:show]
 
   def index
-    @rooms = Room.all
+    @rooms = Room.all.reverse
   end
 
   def show; end
