@@ -52,7 +52,7 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 
 ----------------------------------------------------
 
-1. dodać name do tabeli usera
+1. dodać name do tabeli usera --gotowe
 2. Date w rezerwacji zmienić na "data picker" (znaleźć w google)
 3. zainstalowanie carierwave na AWS
 4. dodać zdjęcia do wszystkich stron, blogów i pokojów
