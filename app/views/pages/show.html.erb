@@ -1,5 +1,15 @@
-<h1 style="color: red"><%= @page.title %></h1>
-Wyświetlenia: <%= @page.views %>
+<h1 class="show-page-title"><%= @page.title %></h1>
 
-<img src="<%= @page.photo %>" alt="">
+<div class="pages-container">
+  <div class="pages-img">
+    <img src="<%= @page.photo %>" class="show-page-img" alt="">
+  </div>
+  <div class="pages-content">
+    <p class="content-text"><% @page.content %></p>
+  </div>
+</div>
+
+
 <a href="<%= @page.photo.url %>"> Pobierz</a>
+
+Wyświetlenia: <%= @page.views %>
