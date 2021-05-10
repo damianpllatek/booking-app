@@ -5,11 +5,10 @@
     <img src="<%= @page.photo %>" class="show-page-img" alt="">
   </div>
   <div class="pages-content">
-    <p class="content-text"><% @page.content %></p>
+    <p class="content-text"><%= @page.content %></p>
+    <p class="content-views">Wyświetlenia: <%= @page.views %></p>
   </div>
 </div>
 
 
-<a href="<%= @page.photo.url %>"> Pobierz</a>
-
-Wyświetlenia: <%= @page.views %>
+<a href="<%= @page.photo.url %>" class="btn btn-primary mt-4 ml-2"> Pobierz</a>
