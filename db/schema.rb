@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_125635) do
+ActiveRecord::Schema.define(version: 2021_05_11_203406) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_04_29_125635) do
     t.string "seo_title"
     t.integer "category_id", null: false
     t.integer "user_id", null: false
+    t.string "photo"
     t.index ["category_id"], name: "index_blogs_on_category_id"
     t.index ["user_id"], name: "index_blogs_on_user_id"
   end
