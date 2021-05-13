@@ -136,28 +136,33 @@
   border: none;
 }
 //--------- SHOW PAGE----------//
-.show-page-title {
+.show-page-title,
+.show-blog-title {
   margin-bottom: 1.4em;
   font-size: 3rem;
 }
 
-.pages-container {
+.pages-container,
+.blogs-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.pages-img {
+.pages-img,
+.blogs-img {
   margin: 0 2em;
   width: 40%;
 }
 
-.show-page-img {
+.show-page-img,
+.show-blog-img {
   width: 100%;
   height: 100%;
 }
 
-.pages-content {
+.pages-content,
+.blogs-content {
   margin: 0 2em;
   width: 60%;
 }
