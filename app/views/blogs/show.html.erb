@@ -1,5 +1,16 @@
-<h1 style="color: royalblue"><%= @blog.title %></h1>
-Wyświetlenia: <%= @blog.views %>
+<h1 class="show-blogs-title"><%= @blog.title %></h1>
+
+<div class="blogs-container">
+  <div class="blogs-img">
+    <img src="<%= @blog.photo %>" class="show-blog-img" alt="">
+  </div>
+  <div class="blogs-content">
+    <p class="content-text"><%= @blog.content %></p>
+    <p class="content-views">Wyświetlenia: <%= @blog.views %></p>
+  </div>
+</div>
 
 <p class="card-text mt-5">Kategoria: <%= @blog.category.name %></p>
 <p class="card-text">Utworzony przez: <%= @blog.user.email %></p>
+
+<a href="<%= @blog.photo.url %>" class="btn btn-primary mt-4 ml-2"> Pobierz</a>

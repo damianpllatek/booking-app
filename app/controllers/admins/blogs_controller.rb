@@ -50,7 +50,7 @@ module Admins
     private
 
     def blog_params
-      params.require(:blog).permit(:title, :seo_title, :content, :category_id, :user_id, :views)
+      params.require(:blog).permit(:title, :seo_title, :content, :category_id, :user_id, :views, :photo)
     end
 
     def find_blog
