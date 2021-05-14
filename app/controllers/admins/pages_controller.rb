@@ -8,7 +8,7 @@ module Admins
     access admin: :all
 
     def index
-      @pages = Page.all.reverse
+      @pages = Page.paginate(page: params[:page], per_page: 5).order('created_at DESC')
     end
 
     def new
