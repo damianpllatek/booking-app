@@ -1,5 +1,8 @@
 <h1>Pokoje</h1>
 
+<div class="flickr_pagination mt-4 mb-4">
+  <%= will_paginate @pages, :container => false %>
+</div>
 
 <div class="row mt-3">
   <% @rooms.each do |room| %>
@@ -19,4 +22,8 @@
       </div>
     </div>
   <% end %>
-</div> 
+</div>
+
+<div class="flickr_pagination mt-4 mb-4">
+  <%= will_paginate @pages, :container => false %>
+</div>
