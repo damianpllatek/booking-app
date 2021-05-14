@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   before_action :find_blog, only: [:show]
 
   def index
-    @blogs = Blog.all.reverse
+    @blogs = Blog.paginate(page: params[:page], per_page: 5).order('created_at DESC')
   end
 
   def show

@@ -1,5 +1,9 @@
 <h1>Rezerwacje</h1>
 
+<div class="flickr_pagination mt-4 mb-4">
+  <%= will_paginate @pages, :container => false %>
+</div>
+
 <% @bookings.each do |booking| %>
   <div class="card text-center mb-3">
     <div class="card-header">
@@ -25,3 +29,7 @@
     </div>
   </div>
 <% end %>
+
+<div class="flickr_pagination mt-4 mb-4">
+  <%= will_paginate @pages, :container => false %>
+</div>
