@@ -10,7 +10,7 @@ module Admins
     access admin: :all
 
     def index
-      @blogs = Blog.all
+      @blogs = Blog.all.reverse
     end
 
     def new
