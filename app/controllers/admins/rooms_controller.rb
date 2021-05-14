@@ -44,7 +44,7 @@ module Admins
     private
 
     def room_params
-      params.require(:room).permit(:name, :description, :size, :base_price)
+      params.require(:room).permit(:name, :description, :size, :base_price, :photo)
     end
 
     def find_room
