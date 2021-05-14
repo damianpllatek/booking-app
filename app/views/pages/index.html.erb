@@ -1,5 +1,9 @@
 <h1>Strony</h1>
 
+<div class="flickr_pagination mt-4 mb-4">
+  <%= will_paginate @pages, :container => false %>
+</div>
+
 <% @pages.each do |page| %>
   <div class="card text-center mb-3">
     <div class="card-header">
@@ -17,3 +21,7 @@
     </div>
   </div>
 <% end %>
+
+<div class="flickr_pagination mt-4 mb-4">
+  <%= will_paginate @pages, :container => false %>
+</div>

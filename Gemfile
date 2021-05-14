@@ -27,8 +27,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'carrierwave'
 gem 'devise'
 gem 'petergate'
-gem 'simple_form'
 gem 'rubocop'
+gem 'simple_form'
+gem 'will_paginate'
 
 
 # Use Active Storage variant
