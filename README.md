@@ -52,19 +52,19 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 
 ----------------------------------------------------
 
-1. dodać name do tabeli usera --gotowe
+1. ----------dodać name do tabeli usera --gotowe
 2. Date w rezerwacji zmienić na "data picker" (znaleźć w google) -- ogarnąć na zajęciach
 3. zainstalowanie carierwave na AWS
-4. dodać zdjęcia do wszystkich stron, blogów i pokojów
+4. ----------dodać zdjęcia do wszystkich stron, blogów i pokojów --gotowe
 5. Tutorial jak połączyć aws z obrazkami - link na skype
 6. dopuszczanie i zawężanie formatów, maksymalny rozmiar pliku i max rozmiar obrazka w px.
-7. Pobawić się carierwave
+7. ----------Pobawić się carierwave
 8. zrobić change column default dla innych tabeli. Tabele mają różne opcje!
-9. zrobić reverse dla innych stron --gotowe
+9. ----------zrobić reverse dla innych stron --gotowe
 10. poczytać o scope
 11*. Dodać do tabeli pages kolumnę state, aby w formularzu było select. W select opcje do wyboru published lub unpublished. 
     Zrobić 2x scope nazywające się published i unpublished. Mają znajdywać się w modelu page i w panelu admina zrobić 2 podstrony published i unpublished.
     Na postronie published ma byc tylko scope @pages = Page.published. W metodzie unpublished @pages = Page.unpublished. (będzie select z wyborem opublikowane czy nie).
-12. WIdoki ogarnąć ze zdjęciami
+12. ---------WIdoki ogarnąć ze zdjęciami --gotowe
 13. Paginacja na stronach
 14. Gem zmieniający id na nazwy https://github.com/norman/friendly_id   (jak się nie uda to następnym razem)
