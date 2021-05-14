@@ -1,1 +1,13 @@
-<h1 style="color: lemon"><%= @room.name %></h1>
+<h1 class="show-room-title"><%= @room.name %></h1>
+
+<div class="rooms-container">
+  <div class="rooms-img">
+    <img src="<%= @room.photo %>" class="show-room-img" alt="">
+  </div>
+  <div class="rooms-content">
+    <p class="content-text"><%= @room.description %></p>
+  </div>
+</div>
+
+
+<a href="<%= @room.photo.url %>" class="btn btn-primary mt-4 ml-2"> Pobierz</a>

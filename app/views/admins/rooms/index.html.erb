@@ -11,6 +11,9 @@
           <div class="card-body">
             <h5 class="card-title">Apartament <%= room.name %></h5>
             <p>Id #<%= room.id %><br></p>
+            <div class="room-card-img">
+              <img src="<%= room.photo %>" class="card-img" alt="">
+            </div>
             <p class="card-text"><%= room.description %></p>
             <p class="card-text">Wielkość: <%= room.size %></p>
             <p class="card-text">Cena: <%= room.base_price %></p>
