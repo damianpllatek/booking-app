@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
 class SearchResultsController < ApplicationController
-  def index; end
+  def index
+    @rooms = Room.all
+  end
 end
