@@ -68,3 +68,7 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 12. ---------WIdoki ogarnąć ze zdjęciami --gotowe
 13. ---------Paginacja na stronach--gotowe
 14. Gem zmieniający id na nazwy https://github.com/norman/friendly_id   (jak się nie uda to następnym razem)
+
+------------------------------------------------------
+1. Przy edycji postów itd. zrobić wyświetlanie aktualnego zdjęcia. 
+2. 
