@@ -30,4 +30,5 @@ Rails.application.routes.draw do
   resources :rooms, only: [:index, :show]
   resources :categories, only: [:index, :show]
   resources :bookings, only: [:index, :show]
+  resources :search_results, only: [:index]
 end
