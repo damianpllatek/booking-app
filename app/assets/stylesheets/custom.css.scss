@@ -14,6 +14,15 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
 //---------- ADMIN NAVIGATION -----------//
 
 .admin-body {
@@ -220,7 +229,59 @@
   height: 100%;
 }
 
-//---------PAGINATION----------//
+//-----------HEADER------------//
+.header {
+  position: relative;
+  display: flex;
+}
+
+.header-img {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background-image: url(asset_path('header-img.jpg'));
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -10;
+}
+
+.header-content {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 50;
+}
+
+.header-title {
+  margin-bottom: 1em;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.header-text {
+  font-size: 1.2rem;
+}
+
+.header-btn {
+  padding: 10px 40px;
+  border-radius: 50px;
+  background-color: #CC6510;
+  border-color: #CC6510;
+}
+
+.header-btn:hover {
+  background-color: #94490C;
+  border-color: #94490C;
+}
+
+.search-form {
+  font-weight: bold;
+}
+  //---------PAGINATION----------//
 
 .flickr_pagination {
   text-align: center;
@@ -284,6 +345,11 @@
   }
 }
 
+@media (min-width: 768px) {
+  .header-content {
+    width: 60%;
+  }
+}
 @media (min-width: 992px) {
   .container {
     max-width: 1600px;
@@ -434,7 +500,7 @@
   }
 
   .admin-link-icon {
-    margin-right: .0;
+    margin-right: 0;
   }
 
   .admin-nav-item:hover {
