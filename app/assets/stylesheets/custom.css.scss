@@ -73,6 +73,11 @@
   cursor: pointer;
 }
 
+//---------- USER HOMEPAGE-CONTACT -----------//
+
+.contacts-container {
+  display: none;
+}
 
 //---------- USER NAVIGATION -----------//
 .navbar {
@@ -279,6 +284,41 @@
     z-index: 950;
   }
 
+  .contacts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: royalblue;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .contacts,
+  .social-media{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+  }
+
+  .phone,
+  .email {
+    margin: 0;
+  }
+
+  .phone {
+    margin-right: 0.7em;
+  }
+
+  .email {
+    margin-left: 0.7em;
+  }
+
+  .social-icon {
+    padding: 0.1em;
+    margin: 0 0.5em;
+    font-size: 1.2rem;
+  }
   .nav-brand {
     padding: 30px 0;
     width: 100%;
