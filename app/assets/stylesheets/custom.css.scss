@@ -266,14 +266,16 @@
   font-size: 1.2rem;
 }
 
-.header-btn {
+.header-btn,
+.about-btn {
   padding: 10px 40px;
   border-radius: 50px;
   background-color: #CC6510;
   border-color: #CC6510;
 }
 
-.header-btn:hover {
+.header-btn:hover,
+.about-btn:hover {
   background-color: #94490C;
   border-color: #94490C;
 }
@@ -281,7 +283,68 @@
 .search-form {
   font-weight: bold;
 }
-  //---------PAGINATION----------//
+
+//-----------ABOUT--------------//
+
+.about-container {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-content {
+  margin-top: 2em;
+}
+
+.about-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #CC6510;
+}
+.about-stars {
+  align-items: center;
+  color: gold;
+}
+
+.about-text {
+  margin-top: 1em;
+}
+
+.about-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-box {
+  width: 50%;
+  text-align: center;
+}
+
+.about-icon {
+  padding: 1em;
+  font-size: 1.6rem;
+  color: #CC6510;
+}
+
+.about-btn {
+  margin: 1em 0;
+  width: 100%;
+}
+
+
+//---------PAGINATION----------//
 
 .flickr_pagination {
   text-align: center;
@@ -345,11 +408,49 @@
   }
 }
 
+@media (min-width: 576px) {
+  .about-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  .about-content {
+    margin-top: 2.8em;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+  .about-stars {
+    font-size: 1.6rem;
+  }
+
+  .about-text {
+    margin-top: 1.4em;
+    font-size: 1.1rem;
+  }
+
+  .icon-box {
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    width: 33%;
+  }
+
+  .about-icon {
+    font-size: 2rem;
+  }
+
+  .about-btn {
+    padding: 1em 2em;
+  }
+}
+
 @media (min-width: 768px) {
   .header-content {
     width: 60%;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     max-width: 1600px;
@@ -537,6 +638,37 @@
 
   .header-title {
     font-size: 2.6rem;
+  }
+
+  .about-container {
+    width: 90%;
+  }
+  .about-image {
+    width: 100%;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-icon {
+    font-size: 2.6rem;
+  }
+
+  .about-btn {
+    width: 40%;
+    align-self: center;
+  }
+
+  .about-icons-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .icon-box {
+    width: 16.6%;
+    text-align: center;
   }
 }
 
