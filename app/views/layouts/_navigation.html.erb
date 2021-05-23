@@ -1,34 +1,55 @@
-<nav class="navbar navbar-expand-lg bg-dark">
-  <%= link_to 'BookingApp', pages_path, class: "navbar-brand" %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="fas fa-bars"></i>
-  </button>
+<nav class="navbar navbar-expand-lg">
+  <div class="container navbar-container">
+    <div class="logo-container">
+      <%= image_tag('logo-removebg-preview.png', :alt => 'Logo firmy', class: 'main-logo') %>
+      <%= link_to 'SunriseHotel', root_path, class: "navbar-brand" %>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to 'Home', pages_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to 'Blog', blogs_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to 'Kategorie', categories_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to 'Pokoje', rooms_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to 'Rezerwacje', bookings_path, class: "nav-link" %>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <%= link_to 'Admin panel', admins_pages_path, class: "btn btn-success mr-2" %>
-      <% if user_signed_in? %>
-        <%= link_to 'Log out', destroy_user_session_path, class: "btn btn-danger mr-2",  method: :delete %>
-      <% end %>
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <div class="collapse navbar-collapse links-container" id="navbarSupportedContent">
+      <div class="navbar-links ml-auto">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to 'Home', pages_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Blog', blogs_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Kategorie', categories_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Pokoje', rooms_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Rezerwacje', bookings_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> Konto
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="admin-panel-link">
+                <i class="fas fa-user-cog admin-link-icon"></i>
+                <%= link_to 'Admin panel', admins_pages_path, class: "nav-link" %>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="log-out-link">
+                <% if user_signed_in? %>
+                  <i class="fas fa-sign-out-alt admin-link-icon"></i>
+                  <%= link_to 'Log out', destroy_user_session_path, class: "nav-link",  method: :delete %>
+                <% end %>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Szukaj" aria-label="Search">
+          <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
   </div>
 </nav>

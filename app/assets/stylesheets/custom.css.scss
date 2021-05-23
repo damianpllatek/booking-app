@@ -11,6 +11,7 @@
 .body {
   height: 100%;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 //---------- ADMIN NAVIGATION -----------//
@@ -80,36 +81,49 @@
 }
 
 //---------- USER NAVIGATION -----------//
+.main-logo {
+  display: none;
+}
+
 .navbar {
-  padding: .5em 4em .5em 4em;
+  padding: .5em 2.5em;
 }
 .navbar-brand,
 .nav-link {
-  color: #fff;
+  color: #CC6510;
+  font-weight: bold;
 }
 
 .navbar-brand {
   font-size: 1.4rem;
+  font-family: 'Marck Script', cursive;
 }
 
 .navbar-brand:hover {
-  color:#fff;
+  color:#94490C;
 }
 .nav-link:hover {
-  color: rgb(67, 170, 72);
+  color: #94490C;
 }
 
 .fa-bars {
   padding: 10px;
   font-size: 1.4rem;
-  color: #fff;
+  color: #CC6510;
 }
 
 .fa-user-alt {
   margin-right: 5px;
-  color: #fff;
+  color: #CC6510;
 }
 
+.search-btn {
+  padding: 5px;
+  color: #CC6510;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+}
 .footer {
   position: fixed;
   bottom: 0;
@@ -139,6 +153,19 @@
   font-size: 22px;
   background: none;
   border: none;
+}
+
+.admin-panel-link,
+.log-out-link {
+  margin-left: .6em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #CC6510;
+}
+
+.admin-link-icon {
+  margin-right: 1em;
 }
 //--------- SHOW PAGE----------//
 .show-page-title,
@@ -248,9 +275,19 @@
   margin-left: 1em;
 }
 //---------- MEDIA -----------//
+@media (min-width: 400px) {
+  .main-logo {
+    display: inline-block;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+}
 
 @media (min-width: 992px) {
-
+  .container {
+    max-width: 1600px;
+  }
   .admin-body {
     width: 100%;
   }
@@ -288,22 +325,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: royalblue;
-    border-bottom: 1px solid lightgrey;
+    color: #CC6510;
   }
 
+  .contacts {
+    margin-left: 50px;
+  }
+
+  .social-media {
+    margin-right: 50px;
+  }
   .contacts,
   .social-media{
-    padding: 1em;
+    padding: .8em;
     display: flex;
     align-items: center;
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
-  }
-
-  .phone,
-  .email {
-    margin: 0;
   }
 
   .phone {
@@ -314,24 +352,69 @@
     margin-left: 0.7em;
   }
 
+  .phone,
+  .email {
+    margin-bottom: 0;
+    padding: .3em;
+  }
+
   .social-icon {
     padding: 0.1em;
     margin: 0 0.5em;
     font-size: 1.2rem;
+    color: #CC6510;
   }
+
+  .social-icon:hover {
+    color: #94490C;
+  }
+
+  .main-logo {
+    margin-left: 8px;
+    margin-right: 1.2em;
+    width: 60px;
+    height: 60px;
+  }
+
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-container,
+  .links-container {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+  }
+
+  .links-container {
+    margin: .8em 0;
+  }
+
+  .navbar {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+
   .nav-brand {
     padding: 30px 0;
     width: 100%;
     text-align: center;
   }
+
   .nav-brand-text {
     font-size: 30px;
     font-weight: bold;
-    color: #fff;
+    color: #000;
   }
 
   .nav-brand-text:hover {
-    color: #fff;
+    color: #000;
     text-decoration: none;
   }
 
@@ -348,6 +431,10 @@
     display: block;
     margin: 0;
     padding: 20px 0;
+  }
+
+  .admin-link-icon {
+    margin-right: .0;
   }
 
   .admin-nav-item:hover {
@@ -383,6 +470,15 @@
   }
 }
 
+@media (min-width: 1150px) {
+  .navbar-container {
+    flex-direction: row;
+  }
+
+  .navbar-container {
+    align-items: center;
+  }
+}
 @media (min-width: 1500px) {
   .admin-container {
     width: 85%;
