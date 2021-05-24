@@ -238,7 +238,7 @@
 .header-img {
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 900px;
   background-image: url(asset_path('header-img.jpg'));
   background-size: cover;
   background-repeat: no-repeat;
@@ -488,6 +488,7 @@
     z-index: 950;
   }
 
+  // Contacts
   .contacts-container {
     display: flex;
     justify-content: space-between;
@@ -536,6 +537,7 @@
     color: #94490C;
   }
 
+  //Navigation
   .main-logo {
     margin-left: 8px;
     margin-right: 1.2em;
@@ -636,10 +638,12 @@
     margin: 20px 100px;
   }
 
+  //Header
   .header-title {
     font-size: 2.6rem;
   }
 
+  //About
   .about-container {
     width: 90%;
   }
@@ -670,6 +674,65 @@
     width: 16.6%;
     text-align: center;
   }
+
+
+}
+
+@media (min-width: 1025px) {
+  //About
+  .about-container {
+    margin-top: 5em;
+    margin-bottom: 4em;
+    flex-direction: row;
+  }
+
+  .about-image,
+  .about-content {
+    padding: 2em;
+    width: 50%;
+    align-self: flex-start;
+  }
+
+  .about-content {
+    margin-top: 0;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-stars {
+    font-size: 1.2rem;
+  }
+
+  .about-text {
+    margin-top: 1.2em;
+    font-size: 1rem;
+  }
+
+  .icon-box {
+    margin-top: 1.2em;
+    margin-bottom: 1.6em;
+    width: 33%;
+  }
+
+  .about-icon {
+    font-size: 1.2rem;
+  }
+
+  .icon-box {
+    margin-top: .8em;
+    margin-right: .6em;
+    margin-bottom: .8em;
+    width: 20%;
+    font-size: .8rem;
+  }
+
+  .about-btn {
+    margin: 0;
+    padding: .5em 1em;
+    align-self: flex-start;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -679,6 +742,13 @@
 
   .navbar-container {
     align-items: center;
+  }
+}
+
+@media (min-width: 1250px) {
+  .about-btn {
+    margin-top: .5em;
+    padding: .8em 1.6em;
   }
 }
 @media (min-width: 1500px) {
@@ -692,5 +762,47 @@
 
   .admin-nav-box {
     width: 15%;
+  }
+
+  .icon-box {
+    margin-right: .5em;
+    width: 16.6%;
+    font-size: .9rem;
+  }
+}
+
+@media (min-width: 1550px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .icon-box {
+    margin-top: 2em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .about-container {
+    width: 85%;
+  }
+
+  .icon-box {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1700px) {
+  .about-container {
+    width: 80%;
+  }
+
+  .icon-box {
+    margin: 2em 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .about-text {
+    font-size: 1.2rem;
   }
 }
