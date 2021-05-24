@@ -1,0 +1,32 @@
+<section class="rooms">
+  <div class="wrapper">
+    <h2>Nasze Pokoje</h2>
+  </div>
+
+  <div class="container rooms-container">
+    <div class="row row-cols-1 row-cols-lg-3">
+      <% @rooms.each do |room| %>
+      <div class="col mb-4">
+        <div class="card h-100 text-center">
+          <img src="<%= room.photo %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Apartament <%= room.name %></h5>
+            <p class="card-text"><%= room.description %></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="fas fa-male"></i> 2</li>
+            <li class="list-group-item"><i class="fas fa-mug-hot"></i> Śniadanie, obiad, kolacja</li>
+            <li class="list-group-item"><i class="fas fa-expand-arrows-alt"></i> Wielkość: <%= room.size %></li>
+            <li class="list-group-item">Ceny od: <%= room.base_price %></li>
+
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>

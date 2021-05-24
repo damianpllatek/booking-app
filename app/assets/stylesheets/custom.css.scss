@@ -343,7 +343,28 @@
   width: 100%;
 }
 
+//-----------ROOMS--------------//
 
+.rooms {
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcf4ed;
+}
+
+.rooms-container {
+  width: 90%;
+}
+
+.wrapper {
+  h2 {
+    margin: 2em;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
 //---------PAGINATION----------//
 
 .flickr_pagination {
