@@ -346,7 +346,7 @@
 //-----------ROOMS--------------//
 
 .rooms {
-  padding: 2em 0;
+  padding: 1.5em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -364,6 +364,28 @@
     font-size: 1.6rem;
     font-weight: 600;
   }
+}
+
+.room-card {
+  box-shadow: 0 0 .4em grey;
+}
+.card-title {
+  font-weight: 600;
+}
+
+.card-text,
+.list-group {
+  font-size: .8rem;
+}
+
+.room-card-btn {
+  background-color: #CC6510;
+  border-color: #CC6510;
+}
+
+.room-card-btn:hover {
+  background-color: #94490C;
+  border-color: #94490C;
 }
 //---------PAGINATION----------//
 
@@ -464,11 +486,25 @@
   .about-btn {
     padding: 1em 2em;
   }
+
+  .card-text,
+  .list-group {
+    font-size: .9rem;
+  }
 }
 
 @media (min-width: 768px) {
   .header-content {
     width: 60%;
+  }
+
+  .card-text,
+  .list-group {
+    font-size: 1rem;
+  }
+
+  .rooms-container {
+    margin-bottom: 2em;
   }
 }
 
@@ -696,6 +732,10 @@
     text-align: center;
   }
 
+  //Rooms
+  .rooms-container {
+    width: 90%;
+  }
 
 }
 
@@ -709,12 +749,15 @@
 
   .about-image,
   .about-content {
-    padding: 2em;
     width: 50%;
     align-self: flex-start;
   }
 
+  .about-image {
+    padding: 2em 2em 2em 0;
+  }
   .about-content {
+    padding: 2em 0 2em 2em;
     margin-top: 0;
   }
 
@@ -803,7 +846,8 @@
 }
 
 @media (min-width: 1600px) {
-  .about-container {
+  .about-container,
+  .rooms-container {
     width: 85%;
   }
 
@@ -813,7 +857,8 @@
 }
 
 @media (min-width: 1700px) {
-  .about-container {
+  .about-container,
+  .rooms-container {
     width: 80%;
   }
 

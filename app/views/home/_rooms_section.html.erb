@@ -7,7 +7,7 @@
     <div class="row row-cols-1 row-cols-lg-3">
       <% @rooms.each do |room| %>
       <div class="col mb-4">
-        <div class="card h-100 text-center">
+        <div class="card h-100 text-center room-card">
           <img src="<%= room.photo %>" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Apartament <%= room.name %></h5>
@@ -18,11 +18,9 @@
             <li class="list-group-item"><i class="fas fa-mug-hot"></i> Śniadanie, obiad, kolacja</li>
             <li class="list-group-item"><i class="fas fa-expand-arrows-alt"></i> Wielkość: <%= room.size %></li>
             <li class="list-group-item">Ceny od: <%= room.base_price %></li>
-
           </ul>
           <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <%= link_to 'Zobacz', room_path(room), class: "btn btn-success room-card-btn" %>
           </div>
         </div>
       </div>
