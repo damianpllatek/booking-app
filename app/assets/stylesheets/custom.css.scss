@@ -1,4 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap';
+@import 'tempusdominus-bootstrap-4.css';
 
 *,
 *::after,
@@ -244,6 +245,10 @@
 
 .flickr_pagination .next_page {
   margin-left: 1em;
+}
+
+.datetimepicker-input {
+  margin-bottom: 1.6em;
 }
 //---------- MEDIA -----------//
 

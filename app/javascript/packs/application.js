@@ -12,3 +12,7 @@ import "bootstrap"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+//= require moment
+//= require moment-timezone-with-data
+//= require tempusdominus-bootstrap-4.js
