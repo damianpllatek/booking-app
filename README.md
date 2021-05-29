@@ -59,7 +59,7 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 5. Tutorial jak połączyć aws z obrazkami - link na skype
 6. dopuszczanie i zawężanie formatów, maksymalny rozmiar pliku i max rozmiar obrazka w px.
 7. ----------Pobawić się carierwave
-8. zrobić change column default dla innych tabeli. Tabele mają różne opcje!
+8. ----------zrobić change column default dla innych tabeli. Tabele mają różne opcje! --gotowe
 9. ----------zrobić reverse dla innych stron --gotowe
 10. poczytać o scope
 11*. Dodać do tabeli pages kolumnę state, aby w formularzu było select. W select opcje do wyboru published lub unpublished. 
@@ -70,5 +70,5 @@ Utworzyć widoki dla admin booking, walidacje i aktualizacja menu
 14. Gem zmieniający id na nazwy https://github.com/norman/friendly_id   (jak się nie uda to następnym razem)
 
 ------------------------------------------------------
-1. Przy edycji postów itd. zrobić wyświetlanie aktualnego zdjęcia. 
+1. Przy edycji postów itd. zrobić wyświetlanie aktualnego zdjęcia. --gotowe
 2. 

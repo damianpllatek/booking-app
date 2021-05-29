@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_14_073509) do
+ActiveRecord::Schema.define(version: 2021_05_18_203825) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.integer "views"
+    t.integer "views", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "seo_title"
