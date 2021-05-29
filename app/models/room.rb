@@ -10,7 +10,7 @@ class Room < ApplicationRecord
 
   def self.filter_by_search_results(start_date, end_date)
     query = Room.all
-    query = query.joins(:bookings).where('bookings.start_date < ? AND bookings.end_date > ?', start_date.to_date, end_date.to_date)
+    # query = query.joins(:bookings).where('(bookings.start_date < ? AND bookings.end_date < ?) OR (bookings.end_date > ? AND bookings.end_date > ?)', start_date.to_date, start_date.to_date, end_date.to_date, end_date.to_date )
     # Pokój id: 1
     # Jedna rezerwacja id 1, room id 1
     # Rezerwacja od 02.05 - 03.05

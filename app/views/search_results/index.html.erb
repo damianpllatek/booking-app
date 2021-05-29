@@ -10,7 +10,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= room.name %></h5>
           <p class="card-text"><%= room.description %></p>
-          <a href="#" class="btn btn-primary">Wybierz</a>
+          <%= link_to 'Wybierz', new_booking_path(room_id: room.id, start_date: params[:search_form][:start_date], end_date: params[:search_form][:end_date]), class: 'btn btn-primary', method: :get %>
         </div>
       </div>
     </div>

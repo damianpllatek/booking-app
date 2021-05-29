@@ -1,10 +1,14 @@
-<%= simple_form_for @booking, url: [:admins, @booking] do |form| %>
-  <%= form.input :room_id, collection: @rooms, include_blank: "Wybierz pokój", label: "Nazwa pokoju", input_html: { class: "form-control mb-3" } %>
+<h1>Zarezerwuj pokój</h1>
+
+<%= @room.name %>
+
+<%= simple_form_for @booking do |form| %>
+  <%= form.hidden_field :room_id, collection: @rooms, include_blank: "Wybierz pokój", label: "Nazwa pokoju", input_html: { class: "form-control mb-3" }, value: params[:room_id] %>
   <div class="form-group">
     <small class="form-text text-muted">Data przyjazdu:</small>
-    <%= form.date_field :start_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4" %>
+    <%= form.date_field :start_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4", value: params[:start_date] %>
     <small class="form-text text-muted">Data wyjazdu:</small>
-    <%= form.date_field :end_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4" %>
+    <%= form.date_field :end_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4", value: params[:end_date] %>
   </div>
   <%= form.input :email, label: "Adres email", input_html: { class: "form-control mb-3" } %>
   <%= form.input :firstname, label: "Imię", input_html: { class: "form-control mb-3" } %>
@@ -14,6 +18,5 @@
   <%= form.input :postcode, label: "Kod pocztowy", input_html: { class: "form-control mb-3" } %>
   <%= form.input :city, label: "Miasto", input_html: { class: "form-control mb-3" } %>
   <%= form.input :rodo, label: "RODO", input_html: { class: "form-control mb-3" } %>
-  <%= form.input :price, label: "Cena", input_html: { class: "form-control mb-3" } %>
   <%= form.button :submit, value: "Zapisz", class: "btn btn-primary mt-3" %>
 <% end %>
