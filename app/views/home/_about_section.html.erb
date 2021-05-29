@@ -1,0 +1,43 @@
+<section class="about">
+  <div class="container about-container">
+    <div class="about-image">
+      <%= image_tag('about-image.jpg', :alt => 'Obraz przedstawiający krzesła przy plaży', class: 'about-img') %>
+    </div>
+    <div class="about-content">
+      <h1 class="about-title">SunriseHotel - Przestronny i Nowoczesny Hotel</h1>
+      <span class="about-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+      <p class="about-text">
+        Zatrzymaj się w ukochanym miejscu w Hiszpanii! Nasz nowoczesny i luksusowy hotel, położony
+        zaraz przy prywatnej piaszczystek plaży w południowej części Hiszpanii, zapewni Ci niezapomniane wakacje.
+        Z balkonu i tarasu roztaczają się niesamowite widoki na Morze Śródziemnomorskie.
+      </p>
+      <div class="about-icons-container">
+        <div class="icon-box">
+          <i class="fas fa-bed about-icon"></i>
+          <p class="icon-box-text">48 Pokoi</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-utensils about-icon"></i>
+          <p class="icon-box-text"> 3 Restauracje</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-cocktail about-icon"></i>
+          <p class="icon-box-text"> 4 Bary</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-umbrella-beach about-icon"></i>
+          <p class="icon-box-text">Prywatna plaża</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-swimmer about-icon"></i>
+          <p class="icon-box-text">Prywatna plaża</p>
+        </div>
+        <div class="icon-box">
+          <i class="fas fa-wifi about-icon"></i>
+          <p class="icon-box-text">Darmowe Wi-Fi</p>
+        </div>
+      </div>
+      <%= link_to 'Rezerwacje', bookings_path, class: "btn btn-primary about-btn" %>
+    </div>
+  </div>
+</section>

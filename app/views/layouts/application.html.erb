@@ -3,7 +3,10 @@
   <head>
     <title>Booking</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8632156806.js" crossorigin="anonymous"></script>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,13 +15,10 @@
   </head>
 
   <body class="body">
+    <%= render 'layouts/contact_info'%>
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
-    <div class="row m-5">
-      <div class="col-9 mb-5">
-        <%= yield %>
-      </div>
-    </div>
-    <%= render 'layouts/footer' %>
+    <%= yield %>
+    <%#= render 'layouts/footer' %>
   </body>
 </html>

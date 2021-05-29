@@ -1,5 +1,15 @@
-<%= simple_form_for :search_form, url: search_results_path, method: :get do |form| %>
-  <%= form.input :start_date, label: "Data początkowa", input_html: { class: "form-control mb-3" } %>
-  <%= form.input :end_date, label: "Data końcowa", input_html: { class: "form-control mb-3" } %>
-  <%= form.button :submit, value: "Szukaj", class: "btn btn-primary mt-3" %>
+<%= simple_form_for :search_form, method: :get do |form| %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <small class="form-text text-muted">Data przyjazdu:</small>
+          <%= form.date_field :start_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4" %>
+          <small class="form-text text-muted">Data wyjazdu:</small>
+          <%= form.date_field :end_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4" %>
+        </div>
+        <%= form.button :submit, value: "Szukaj", class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
 <% end %>

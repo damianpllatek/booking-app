@@ -24,8 +24,11 @@ gem 'jbuilder', '~> 2.7'
 
 
 # custom gems
+gem 'bootstrap4-datetime-picker-rails'
+gem 'bs4_datetime_picker'
 gem 'carrierwave'
 gem 'devise'
+gem 'font-awesome-rails'
 gem 'petergate'
 gem 'rubocop'
 gem 'simple_form'
