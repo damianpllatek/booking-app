@@ -1,14 +1,21 @@
 <%= simple_form_for :search_form, method: :get do |form| %>
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
-        <div class="form-group">
-          <small class="form-text text-muted">Data przyjazdu:</small>
-          <%= form.date_field :start_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4" %>
-          <small class="form-text text-muted">Data wyjazdu:</small>
-          <%= form.date_field :end_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4" %>
+      <div class="col-lg-12">
+        <div class="form-group header-form-group">
+          <div class="header-form-one">
+            <small class="form-text">Data przyjazdu:</small>
+            <%= form.date_field :start_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4" %>
+          </div>
+          <div class="header-form-two">
+            <small class="form-text">Data wyjazdu:</small>
+            <%= form.date_field :end_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker4" %>
+          </div>
+          <div class="header-form-btn">
+            <%= form.button :submit, value: "Szukaj", class: "btn btn-primary header-btn" %>
+          </div>
         </div>
-        <%= form.button :submit, value: "Szukaj", class: "btn btn-primary" %>
+
       </div>
     </div>
   </div>
