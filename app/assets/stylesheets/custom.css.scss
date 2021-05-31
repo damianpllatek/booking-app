@@ -24,6 +24,14 @@
   z-index: -1;
 }
 
+.wrapper {
+  h2 {
+    margin: 2em;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #CC6510;
+  }
+}
 //---------- ADMIN NAVIGATION -----------//
 
 .admin-body {
@@ -355,20 +363,13 @@
   background-color: #fcf4ed;
 }
 
-.rooms-container {
+.rooms-container,
+.blogs-container {
   width: 90%;
 }
 
-.wrapper {
-  h2 {
-    margin: 2em;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #CC6510;
-  }
-}
-
-.room-card {
+.room-card,
+.blog-card {
   box-shadow: 0 0 .4em grey;
 }
 .card-title {
@@ -380,14 +381,16 @@
   font-size: .8rem;
 }
 
-.room-card-btn {
-  padding: .4em 1em;
+.room-card-btn,
+.blog-card-btn {
+  padding: .6em 1.2em;
   background-color: #CC6510;
   border-color: #CC6510;
   border-radius: 50px;
 }
 
-.room-card-btn:hover {
+.room-card-btn:hover,
+.blog-card-btn:hover {
   background-color: #94490C;
   border-color: #94490C;
 }
@@ -461,6 +464,19 @@
 
 .form-img {
   width: 300px;
+}
+
+//-----------BLOGS--------------//
+.blogs {
+  padding: 1.5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-footer {
+  background-color: #fff;
 }
 //---------PAGINATION----------//
 
@@ -634,7 +650,8 @@
     font-size: 1rem;
   }
 
-  .rooms-container {
+  .rooms-container,
+  .blogs-container {
     margin-bottom: 2em;
   }
 
@@ -881,7 +898,8 @@
   }
 
   //Rooms
-  .rooms-container {
+  .rooms-container,
+  .blogs-container {
     width: 90%;
   }
 
@@ -1028,7 +1046,8 @@
 
 @media (min-width: 1600px) {
   .about-container,
-  .rooms-container {
+  .rooms-container,
+  .blogs-container {
     width: 85%;
   }
 
@@ -1050,7 +1069,8 @@
 
 @media (min-width: 1700px) {
   .about-container,
-  .rooms-container {
+  .rooms-container,
+  .blogs-container {
     width: 80%;
   }
 
