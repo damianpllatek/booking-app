@@ -499,6 +499,26 @@
 .card-footer {
   background-color: #fff;
 }
+
+//-----------INFO---------------//
+
+.info-section {
+  padding: 2em 1em;
+  width: 100%;
+  background-image: url(asset_path('sea.jpg'));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info-icon,
+.info-title {
+  color: #003A6C;
+}
+
+.info-icon {
+  font-size: 3rem;
+}
 //---------PAGINATION----------//
 
 .flickr_pagination {
