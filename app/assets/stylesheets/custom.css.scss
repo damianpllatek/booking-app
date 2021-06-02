@@ -376,7 +376,8 @@
 //-----------ROOMS--------------//
 
 .rooms,
-.blogs {
+.blogs,
+.attractions {
   padding: 1.5em 0;
   display: flex;
   flex-direction: column;
@@ -386,12 +387,14 @@
 }
 
 .rooms-container,
-.blogs-container {
+.blogs-container,
+.attractions-container {
   width: 90%;
 }
 
 .room-card,
-.blog-card {
+.blog-card,
+.attraction-card {
   box-shadow: 0 0 .4em grey;
 }
 .card-title {
@@ -404,7 +407,8 @@
 }
 
 .room-card-btn,
-.blog-card-btn {
+.blog-card-btn,
+.attraction-card-btn {
   padding: .6em 1.2em;
   background-color: #CC6510;
   border-color: #CC6510;
@@ -412,7 +416,8 @@
 }
 
 .room-card-btn:hover,
-.blog-card-btn:hover {
+.blog-card-btn:hover,
+.attraction-card-btn:hover {
   background-color: #94490C;
   border-color: #94490C;
 }
@@ -747,7 +752,8 @@
   }
 
   .rooms-container,
-  .blogs-container {
+  .blogs-container,
+  .attractions-container {
     margin-bottom: 2em;
   }
 
@@ -1025,7 +1031,8 @@
   //Rooms
   .rooms-container,
   .blogs-container,
-  .info-container {
+  .info-container,
+  .attractions-container {
     width: 90%;
   }
 
@@ -1205,7 +1212,8 @@
 @media (min-width: 1600px) {
   .about-container,
   .rooms-container,
-  .blogs-container {
+  .blogs-container,
+  .attractions-container {
     width: 85%;
   }
 
@@ -1228,7 +1236,8 @@
 @media (min-width: 1700px) {
   .about-container,
   .rooms-container,
-  .blogs-container {
+  .blogs-container,
+  .attractions-container {
     width: 80%;
   }
 
