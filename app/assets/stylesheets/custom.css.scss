@@ -375,7 +375,8 @@
 
 //-----------ROOMS--------------//
 
-.rooms {
+.rooms,
+.blogs {
   padding: 1.5em 0;
   display: flex;
   flex-direction: column;
@@ -488,12 +489,9 @@
 }
 
 //-----------BLOGS--------------//
+
 .blogs {
-  padding: 1.5em 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: #fff;
 }
 
 .card-footer {
@@ -511,6 +509,15 @@
   background-repeat: no-repeat;
 }
 
+.info-container {
+  padding: 2.5em 0;
+}
+
+.info-box {
+  text-align: center;
+  padding: 2em 0;
+}
+
 .info-icon,
 .info-title {
   color: #003A6C;
@@ -518,6 +525,15 @@
 
 .info-icon {
   font-size: 3rem;
+}
+
+.info-title {
+  margin-top: 1em;
+  font-size: 1.6rem;
+}
+
+.info-text {
+  font-size: 1.2rem;
 }
 //---------PAGINATION----------//
 
@@ -699,6 +715,10 @@
   .gallery-photo-8 {
     width: 100%;
     height: 450px;
+  }
+
+  .info-container {
+    padding: 2.5em 2.5em;
   }
 }
 
@@ -1004,7 +1024,8 @@
 
   //Rooms
   .rooms-container,
-  .blogs-container {
+  .blogs-container,
+  .info-container {
     width: 90%;
   }
 
