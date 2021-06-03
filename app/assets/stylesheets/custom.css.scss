@@ -377,7 +377,8 @@
 
 .rooms,
 .blogs,
-.attractions {
+.attractions,
+.testimonials {
   padding: 1.5em 0;
   display: flex;
   flex-direction: column;
@@ -388,7 +389,8 @@
 
 .rooms-container,
 .blogs-container,
-.attractions-container {
+.attractions-container,
+.testimonials-container {
   width: 90%;
 }
 
@@ -495,7 +497,8 @@
 
 //-----------BLOGS--------------//
 
-.blogs {
+.blogs,
+.testimonials {
   background-color: #fff;
 }
 
@@ -540,6 +543,31 @@
 .info-text {
   font-size: 1.2rem;
 }
+
+//--------TESTIMONIALS----------//
+
+.testimonials-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonials-img {
+  margin-bottom: 1em;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.testimonials-name {
+  font-weight: 600;
+  color: #CC6510;
+}
+
+
+
 //---------PAGINATION----------//
 
 .flickr_pagination {
