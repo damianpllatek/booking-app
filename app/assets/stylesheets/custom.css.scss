@@ -377,7 +377,8 @@
 
 .rooms,
 .blogs,
-.attractions {
+.attractions,
+.testimonials {
   padding: 1.5em 0;
   display: flex;
   flex-direction: column;
@@ -388,7 +389,8 @@
 
 .rooms-container,
 .blogs-container,
-.attractions-container {
+.attractions-container,
+.testimonials-container {
   width: 90%;
 }
 
@@ -495,7 +497,8 @@
 
 //-----------BLOGS--------------//
 
-.blogs {
+.blogs,
+.testimonials {
   background-color: #fff;
 }
 
@@ -540,6 +543,42 @@
 .info-text {
   font-size: 1.2rem;
 }
+
+//--------TESTIMONIALS----------//
+
+.testimonials-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonials-img {
+  margin-bottom: 1em;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonials-name {
+  font-weight: 600;
+  color: #CC6510;
+}
+
+.testimonials-stars {
+  font-size: 1.2rem;
+  color: gold;
+}
+
+.testimonials-text {
+  margin-top: 1em;
+}
+
+
+
 //---------PAGINATION----------//
 
 .flickr_pagination {
@@ -773,6 +812,22 @@
     width: 50%;
     height: 400px;
   }
+
+  .testimonials-container {
+    padding: 2em 0;
+  }
+
+  .testimonials-media {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .testimonials-img {
+    margin-right: 1em;
+    width: 120px;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -1040,7 +1095,26 @@
     margin-bottom: 2em;
   }
 
-  //Gallery
+  //TESTIMONIALS
+
+  .testimonials-container {
+    width: 80%;
+    padding: 3em 0;
+  }
+
+  .testimonials-media {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .testimonials-img {
+    margin-right: 1.2em;
+  }
+
+  .testimonials-text {
+    font-size: 1rem;
+  }
 
 }
 
@@ -1114,6 +1188,11 @@
   .header-form-two {
     margin-right: 1.4em
   }
+
+  .testimonials-container {
+    width: 70%;
+    padding: 3.5em 0;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -1145,6 +1224,10 @@
     margin-top: .5em;
     padding: .8em 1.6em;
   }
+
+  .testimonials-container {
+    width: 65%;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -1155,6 +1238,12 @@
   .header-form-one,
   .header-form-two {
     margin-right: 2em
+  }
+}
+
+@media (min-width: 1350px) {
+  .testimonials-container {
+    width: 60%;
   }
 }
 
@@ -1207,6 +1296,10 @@
   .header-form-two {
     margin-right: 2.5em
   }
+
+  .testimonials-container {
+    width: 55%;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -1231,6 +1324,11 @@
   .gallery-photo-8 {
     height: 400px;
   }
+
+  .testimonials-container {
+    width: 50%;
+  }
+
 }
 
 @media (min-width: 1700px) {
