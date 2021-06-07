@@ -13,6 +13,7 @@
   height: 100%;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .hero-shadow {
@@ -577,7 +578,73 @@
   margin-top: 1em;
 }
 
+//------------START-------------//
 
+.start {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.start-img {
+  width: 100%;
+  height: 450px;
+  background-image: url(asset_path('start-bg.jpg'));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -10;
+}
+
+.start-content {
+  width: 90%;
+  position: absolute;
+  z-index: 5000;
+}
+
+.start-title {
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.start-text {
+  margin-bottom: 1.6em;
+}
+
+.start-btn-one,
+.start-btn-two {
+  width: 80%;
+  padding: .6em 1.2em;
+  font-size: .9rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+.start-btn-one {
+  margin-bottom: .8em;
+  background-color: #CC6510;
+  border-color: #CC6510;
+}
+
+.start-btn-one:hover {
+  background-color: #94490C;
+  border-color: #94490C;
+}
+
+.start-btn-two {
+  color: #CC6510;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.start-btn-two:hover {
+  background-color: #CC6510;
+  border-color: #CC6510;
+}
 
 //---------PAGINATION----------//
 
@@ -676,6 +743,14 @@
     width: 100%;
     height: 350px;
   }
+
+  .start-content {
+    width: 80%;
+  }
+
+  .start-title {
+    font-size: 1.6rem;
+  }
 }
 
 @media (min-width: 500px) {
@@ -764,6 +839,36 @@
   .info-container {
     padding: 2.5em 2.5em;
   }
+
+  .start-btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .start-btn-one,
+  .start-btn-two {
+    width: auto;
+    font-size: 1rem;
+  }
+
+  .start-btn-one {
+    margin-bottom: 0;
+    margin-right: .5em;
+    padding: .7em 1.4em;
+  }
+
+  .start-btn-two {
+    margin-left: .5em;
+  }
+
+  .start-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .start-text {
+    margin-bottom: 1.8em;
+  }
 }
 
 @media (min-width: 700px) {
@@ -826,6 +931,15 @@
   .testimonials-img {
     margin-right: 1em;
     width: 120px;
+  }
+
+  .start-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+
+  .start-text {
+    font-size: 1rem;
   }
 
 }
@@ -1116,6 +1230,17 @@
     font-size: 1rem;
   }
 
+  .start-content {
+    width: 60%;
+  }
+
+  .start-title{
+    font-size: 2.2rem;
+  }
+
+  .start-text {
+    margin-bottom: 1.8em;
+  }
 }
 
 @media (min-width: 1025px) {
