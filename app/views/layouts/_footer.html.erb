@@ -1,3 +1,49 @@
-<div class="footer fixed-bottom">
-  <p>&copy; 2021 | BookingApp</p>
+<div class="footer">
+  <div class="container footer-container">
+    <div class="row row-cols-1 row-cols-lg-4">
+      <div class="col mb-4 footer-box">
+        <h3 class="footer-title">O Hotelu</h3>
+        <p class="footer-text">Nowoczesny hotel w śródziemnomorskim stylu przy jednej z najpiękniejszych miejscowości Hiszpanii, z bezpośrednim dostępem do złocistych plaż.</p>
+        <p class="footer-text">Świetny dla osób ceniących sobie spokój i ciszę, lubiących nórkować oraz zwiedzać.</p>
+        <br>
+        <div class="footer-btn-box">
+          <%= link_to 'Rezerwacja', root_path, class: 'btn btn-success footer-btn' %>
+        </div>
+      </div>
+      <div class="col mb-4 footer-box">
+        <h3 class="footer-title">Nawigacja</h3>
+        <%= link_to 'Strona główna', root_path, class: 'footer-link' %>
+        <%= link_to 'Blog', blogs_path, class: "footer-link" %>
+        <%= link_to 'Kategorie', categories_path, class: "footer-link" %>
+        <%= link_to 'Pokoje', rooms_path, class: "footer-link" %>
+        <%= link_to 'Rezerwacje', bookings_path, class: "footer-link" %>
+      </div>
+      <div class="col mb-4 footer-box">
+        <h3 class="footer-title">Co Nowego</h3>
+        <%= link_to 'Tytuł artykułu numer 1', blog_path(3), class: 'footer-link' %>
+        <%= link_to 'Tytuł artykułu numer 2', blog_path(2), class: 'footer-link' %>
+        <%= link_to 'Tytuł atrakcji numer 1', page_path(23), class: 'footer-link' %>
+        <%= link_to 'Tytuł atrakcji numer 2', page_path(24), class: 'footer-link' %>
+      </div>
+      <div class="col mb-4 footer-box">
+        <h3 class="footer-title">Kontakt</h3>
+        <p class="footer-text">SunriseHotel, Son Bou, Minorka, Hiszpania</p>
+        <p class="footer-text">+48 123 456 789</p>
+        <p class="footer-text">+48 123 456 789</p>
+        <p class="footer-text">hello@sunrisehotel.com</p>
+        <div class="footer-social-media">
+          <a href="#" class="footer-icon"><i class="fab fa-tripadvisor"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-facebook-square"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!--  <p>&copy; 2021 | BookingApp</p>-->
 </div>
