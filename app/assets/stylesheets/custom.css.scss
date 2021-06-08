@@ -143,19 +143,6 @@
   background: none;
   border: none;
 }
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  margin-top: 1rem;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  background-color: #343a40;
-}
 
 .message-container {
   display: flex;
@@ -654,6 +641,68 @@
   filter: grayscale(.5);
 }
 
+//----------FOOTER--------------//
+
+.footer {
+  padding: 2.5em 0;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid lightgrey;
+  color: #000;
+  background-color: #fff;
+}
+
+.footer-container {
+  width: 90%;
+}
+
+.footer-title {
+  margin-bottom: 1em;
+  color: #CC6510;
+  font-weight: 600;
+}
+
+.footer-btn {
+  padding: .7em 1.4em;
+  color: #fff;
+  background-color: #CC6510;
+  border-color: #CC6510;
+  border-radius: 50px;
+}
+
+.footer-btn:hover {
+  background-color: #94490C;
+  border-color: #94490C;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link {
+  margin-bottom: 1em;
+  color: #000;
+  transition: color .2s;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: #CC6510;
+}
+
+.footer-icon {
+  padding: 0.1em;
+  margin: 0 0.5em;
+  font-size: 1.2rem;
+  color: #CC6510;
+  transition: color .3s;
+}
+
+.footer-icon:hover {
+  color: #94490C;
+}
 //---------PAGINATION----------//
 
 .flickr_pagination {
@@ -1209,7 +1258,8 @@
   .rooms-container,
   .blogs-container,
   .info-container,
-  .attractions-container {
+  .attractions-container,
+  .footer-container {
     width: 90%;
   }
 
@@ -1439,7 +1489,8 @@
   .about-container,
   .rooms-container,
   .blogs-container,
-  .attractions-container {
+  .attractions-container,
+  .footer-container {
     width: 85%;
   }
 
@@ -1468,7 +1519,8 @@
   .about-container,
   .rooms-container,
   .blogs-container,
-  .attractions-container {
+  .attractions-container,
+  .footer-container {
     width: 80%;
   }
 
