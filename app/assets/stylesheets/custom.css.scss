@@ -709,6 +709,55 @@
   text-align: center;
   border-top: 1px solid lightgrey;
 }
+
+//-----------PAGES--------------//
+
+.pages-index-container {
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pages-index-title {
+  color: #CC6510;
+  font-weight: 600;
+}
+
+.pages-index-card {
+  width: 90%;
+  margin: 1em 0 2em 0;
+  border: none;
+}
+
+.pages-index-img {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 5px;
+}
+
+.pages-index-title {
+  margin: 1em 0;
+  color: #CC6510;
+  font-weight: 800;
+}
+
+.pages-index-text {
+  margin-bottom: 2em;
+}
+
+.pages-index-btn {
+  padding: .6em 1.2em;
+  background-color: #CC6510;
+  border-color: #CC6510;
+  border-radius: 50px;
+}
+
+.pages-index-btn:hover {
+  background-color: #94490C;
+  border-color: #94490C;
+}
 //---------PAGINATION----------//
 
 .flickr_pagination {
@@ -1304,6 +1353,10 @@
 
   .start-text {
     margin-bottom: 1.8em;
+  }
+
+  .pages-index-card {
+    max-width: 800px;
   }
 }
 

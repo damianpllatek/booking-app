@@ -1,27 +1,42 @@
-<h1>Strony</h1>
-
-<div class="flickr_pagination mt-4 mb-4">
-  <%= will_paginate @pages, :container => false %>
-</div>
-
-<% @pages.each do |page| %>
-  <div class="card text-center mb-3">
-    <div class="card-header">
-      Strona # <%= page.id %>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title"><%= page.title %></h5>
-      <h6 class="card-title"><%= page.seo_title %></h6>
-      <p class="card-text"><%= page.content %></p>
-      <p class="card-text">Wyświetlenia <%= page.views %></p>
-      <%= link_to 'Zobacz', page_path(page), class: "btn btn-success" %>
-    </div>
-    <div class="card-footer text-muted">
-      2 days ago
-    </div>
+<div class="container pages-index-container">
+  <h1 class="pages-index-title">Atrakcje</h1>
+  <div class="flickr_pagination mt-4 mb-4">
+    <%= will_paginate @pages, :container => false %>
   </div>
-<% end %>
 
-<div class="flickr_pagination mt-4 mb-4">
-  <%= will_paginate @pages, :container => false %>
+  <% @pages.each do |page| %>
+    <div class="card pages-index-card">
+      <img src="<%= page.photo %>" class="card-img-top pages-index-img" alt="<%= page.seo_title %>">
+      <div class="card-body">
+        <h5 class="card-title pages-index-title"><%= page.title %></h5>
+        <p class="card-text pages-index-text"><%= page.content %></p>
+        <%= link_to 'Czytaj dalej', page_path(page), class: "btn btn-success pages-index-btn" %>
+      </div>
+    </div>
+  <% end %>
+  <div class="flickr_pagination mt-4 mb-4">
+    <%= will_paginate @pages, :container => false %>
+  </div>
 </div>
+
+
+
+
+<%# @pages.each do |page| %>
+<!--  <div class="card text-center mb-3">-->
+<!--    <div class="card-header">-->
+<!--      Strona # <%#= page.id %>-->
+<!--    </div>-->
+<!--    <div class="card-body">-->
+<!--      <h5 class="card-title"><%#= page.title %></h5>-->
+<!--      <h6 class="card-title"><%#= page.seo_title %></h6>-->
+<!--      <p class="card-text"><%#= page.content %></p>-->
+<!--      <p class="card-text">Wyświetlenia <%#= page.views %></p>-->
+      <%#= link_to 'Zobacz', page_path(page), class: "btn btn-success" %>
+<!--    </div>-->
+<!--    <div class="card-footer text-muted">-->
+<!--      2 days ago-->
+<!--    </div>-->
+<!--  </div>-->
+<%# end %>
+
