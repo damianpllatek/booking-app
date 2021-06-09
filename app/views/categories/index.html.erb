@@ -1,20 +1,21 @@
-<h1>Kategorie</h1>
-
-<table class="table mt-5">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Nazwa</th>
-      <th scope="col">Opcje</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @categories.each do |category| %>
+<div class="container pages-index-container">
+  <h1 class="pages-index-title">Kategorie</h1>
+  <table class="table mt-5">
+    <thead class="thead-dark">
       <tr>
-        <th scope="row"><%= category.id %></th>
-        <td><%= category.name %></td>
-        <td><%= link_to 'Zobacz', category_path(category), class: "btn btn-success" %></td>
+        <th scope="col">Id</th>
+        <th scope="col">Nazwa</th>
+        <th scope="col">Opcje</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <th scope="row"><%= category.id %></th>
+          <td><%= category.name %></td>
+          <td><%= link_to 'Zobacz', category_path(category), class: "btn btn-success pages-index-btn" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
