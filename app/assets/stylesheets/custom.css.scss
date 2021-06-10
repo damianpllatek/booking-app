@@ -93,6 +93,7 @@
   cursor: pointer;
 }
 
+
 //---------- USER HOMEPAGE-CONTACT -----------//
 
 .contacts-container {
@@ -1067,6 +1068,7 @@
     height: auto;
   }
 
+
   .burger-btn {
     display: none;
   }
@@ -1092,6 +1094,9 @@
     z-index: 950;
   }
 
+  .admin-categories-table {
+    width: 90%;
+  }
   // Contacts
   .contacts-container {
     display: flex;

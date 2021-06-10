@@ -2,27 +2,27 @@
   <h1 class="heading-title">Kategorie</h1>
   <%= link_to 'Nowa kategoria', new_admins_category_path, class: "btn btn-primary" %>
 </div>
-<div class="admin-content">
-  <table class="table">
+<div class="container pages-index-container">
+  <table class="table admin-categories-table mt-5">
     <thead class="thead-dark">
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Nazwa</th>
-        <th scope="col">Opcje</th>
-      </tr>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Opcje</th>
+    </tr>
     </thead>
     <tbody>
-      <% @categories.each do |category| %>
-        <tr>
-          <th scope="row"><%= category.id %></th>
-          <td><%= category.name %></td>
-          <td>
-            <%= link_to 'Zobacz', category_path(category), class: "btn btn-success" %>
-            <%= link_to 'Edytuj', edit_admins_category_path(category), class: "btn btn-primary" %>
-            <%= link_to 'Usuń', admins_category_path(category), class: "btn btn-danger", method: :delete %>
-          </td>
-        </tr>
-      <% end %>
+    <% @categories.each do |category| %>
+      <tr>
+        <th scope="row"><%= category.id %></th>
+        <td><%= category.name %></td>
+        <td>
+          <%= link_to 'Zobacz', category_path(category), class: "btn btn-success" %>
+          <%= link_to 'Edytuj', edit_admins_category_path(category), class: "btn btn-primary" %>
+          <%= link_to 'Usuń', admins_category_path(category), class: "btn btn-danger", method: :delete %>
+        </td>
+      </tr>
+    <% end %>
     </tbody>
   </table>
 </div>
