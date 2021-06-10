@@ -1,5 +1,5 @@
 <div class="heading-bg">
-  <h1 class="heading-title">Artykuly</h1>
+  <h1 class="heading-title">Artykuły</h1>
   <%= link_to 'Nowy post', new_admins_blog_path, class: "btn btn-primary" %>
 </div>
 
@@ -7,29 +7,25 @@
   <%= will_paginate @pages, :container => false %>
 </div>
 
-<div class="admin-content">
+<div class="container pages-index-container">
+  <h1 class="pages-index-title">Blog</h1>
+  <div class="flickr_pagination mt-4 mb-4">
+    <%= will_paginate @blogs, :container => false %>
+  </div>
   <% @blogs.each do |blog| %>
-    <div class="card text-center">
-      <div class="card-header">
-        Blog # <%= blog.id %>
-      </div>
+    <div class="card pages-index-card">
+      <img src="<%= blog.photo %>" class="card-img-top pages-index-img" alt="<%= blog.seo_title %>">
       <div class="card-body">
-        <h5 class="card-title"><%= blog.title %></h5>
-        <h6 class="card-title"><%= blog.seo_title %></h6>
-        <p class="card-text"><%= blog.content %></p>
-        <p class="card-text">Wyświetlenia: <%= blog.views %></p>
-        <p class="card-text">Kategoria: <%= blog.category.name %></p>
+        <h5 class="card-title pages-index-title"><%= blog.title %></h5>
+        <p class="card-text pages-index-text"><%= blog.content %></p>
         <%= link_to 'Zobacz', blog_path(blog), class: "btn btn-success" %>
         <%= link_to 'Edytuj', edit_admins_blog_path(blog), class: "btn btn-primary" %>
         <%= link_to 'Usuń', admins_blog_path(blog), class: "btn btn-danger", method: :delete %>
       </div>
-      <div class="card-footer text-muted">
-        <p class="card-text">Utworzony przez: <%= blog.user.email %></p>
-      </div>
     </div>
   <% end %>
+  <div class="flickr_pagination mt-4 mb-4">
+    <%= will_paginate @blogs, :container => false %>
+  </div>
 </div>
 
-<div class="flickr_pagination mt-4 mb-4">
-  <%= will_paginate @pages, :container => false %>
-</div>
