@@ -6,19 +6,18 @@
 <div class="flickr_pagination mt-4 mb-4">
   <%= will_paginate @pages, :container => false %>
 </div>
-
-<div class="admin-content">
-  <div class="row">
+  <div class="container pages-index-container pages-index-rooms-container">
+  <div class="row mt-3">
     <% @rooms.each do |room| %>
-      <div class="col-sm-6 mb-3">
+      <div class="col-sm-12 col-lg-6 mb-3">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Apartament <%= room.name %></h5>
+            <h5 class="card-title pages-index-title">Apartament <%= room.name %></h5>
             <p>Id #<%= room.id %><br></p>
             <div class="room-card-img">
               <img src="<%= room.photo %>" class="card-img" alt="">
             </div>
-            <p class="card-text"><%= room.description %></p>
+            <p class="card-text pages-index-text"><%= room.description %></p>
             <p class="card-text">Wielkość: <%= room.size %></p>
             <p class="card-text">Cena: <%= room.base_price %></p>
             <%= link_to 'Zobacz', room_path(room), class: "btn btn-success" %>
@@ -30,7 +29,6 @@
     <% end %>
   </div>
 </div>
-
 <div class="flickr_pagination mt-4 mb-4">
   <%= will_paginate @pages, :container => false %>
 </div>
