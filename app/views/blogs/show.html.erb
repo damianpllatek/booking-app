@@ -1,16 +1,11 @@
-<h1 class="show-blogs-title"><%= @blog.title %></h1>
-
-<div class="blogs-container">
-  <div class="blogs-img">
-    <img src="<%= @blog.photo %>" class="show-blog-img" alt="">
-  </div>
-  <div class="blogs-content">
-    <p class="content-text"><%= @blog.content %></p>
-    <p class="content-views">Wyświetlenia: <%= @blog.views %></p>
-  </div>
+<div class="container pages-index-container">
+    <div class="card pages-index-card">
+      <img src="<%= @blog.photo %>" class="card-img-top pages-index-img" alt="<%= @blog.seo_title %>">
+      <div class="card-body">
+        <h5 class="card-title pages-index-title"><%= @blog.title %></h5>
+        <p class="card-text pages-index-text"><%= @blog.content %></p>
+        <br>
+        <p class="content-views">Wyświetlenia: <%= @blog.views %></p>
+      </div>
+    </div>
 </div>
-
-<p class="card-text mt-5">Kategoria: <%= @blog.category.name %></p>
-<p class="card-text">Utworzony przez: <%= @blog.user.email %></p>
-
-<a href="<%= @blog.photo.url %>" class="btn btn-primary mt-4 ml-2"> Pobierz</a>
