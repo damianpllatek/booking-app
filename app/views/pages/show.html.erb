@@ -1,14 +1,11 @@
-<h1 class="show-page-title"><%= @page.title %></h1>
-
-<div class="pages-container">
-  <div class="pages-img">
-    <img src="<%= @page.photo %>" class="show-page-img" alt="">
-  </div>
-  <div class="pages-content">
-    <p class="content-text"><%= @page.content %></p>
-    <p class="content-views">Wyświetlenia: <%= @page.views %></p>
+<div class="container pages-index-container">
+  <div class="card pages-index-card">
+    <img src="<%= @page.photo %>" class="card-img-top pages-index-img" alt="<%= @page.seo_title %>">
+    <div class="card-body">
+      <h5 class="card-title pages-index-title"><%= @page.title %></h5>
+      <p class="card-text pages-index-text"><%= @page.content %></p>
+      <br>
+      <p class="content-views">Wyświetlenia: <%= @page.views %></p>
+    </div>
   </div>
 </div>
-
-
-<a href="<%= @page.photo.url %>" class="btn btn-primary mt-4 ml-2"> Pobierz</a>
