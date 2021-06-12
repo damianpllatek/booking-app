@@ -414,6 +414,30 @@
   margin: 1em 0;
 }
 
+.show-rooms-container {
+  padding: 2em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show-room-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #CC6510;
+}
+
+.show-rooms-img {
+  margin-bottom: 2em;
+}
+.show-room-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 //----------GALLERY-------------//
 
@@ -1365,6 +1389,27 @@
 
   .pages-index-card {
     max-width: 800px;
+  }
+
+  .show-room-title {
+    font-size: 1.6rem;
+    margin-bottom: 3em;
+  }
+
+  .show-rooms-img {
+    width: 40%;
+  }
+
+  .show-rooms-content {
+    width: 60%;
+    margin-left: 2em;
+  }
+  .show-room-container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
