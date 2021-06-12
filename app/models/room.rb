@@ -3,8 +3,8 @@ class Room < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-  validates :name, presence: true, length: { minimum: 3, maximum: 50 }
-  validates :description, presence: true, length: { minimum: 10, maximum: 300 }
+  validates :name, presence: true, length: { minimum: 3, maximum: 250 }
+  validates :description, presence: true, length: { minimum: 10, maximum: 5000 }
   validates :size, presence: true
   validates :base_price, presence: true
 end
