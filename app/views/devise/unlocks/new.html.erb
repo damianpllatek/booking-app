@@ -1,19 +1,21 @@
-<h2 class="mb-5">Resend unlock instructions</h2>
+<div class="container sessions-container">
+  <h1 class="sessions-title mb-5">Resend unlock instructions</h1>
 
-<%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
-  <%= f.full_error :unlock_token %>
+  <%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+    <%= f.error_notification %>
+    <%= f.full_error :unlock_token %>
 
-  <div class="form-inputs form-group mb-3">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email", class: "form-control mb-3" } %>
-  </div>
+    <div class="form-inputs form-group mb-3">
+      <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email", class: "form-control sessions-form mb-3" } %>
+    </div>
 
-  <div class="form-actions mb-3">
-    <%= f.button :submit, "Resend unlock instructions", class: "btn btn-primary" %>
-  </div>
-<% end %>
+    <div class="form-actions mb-3">
+      <%= f.button :submit, "Resend unlock instructions", class: "btn btn-primary sessions-btn" %>
+    </div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>

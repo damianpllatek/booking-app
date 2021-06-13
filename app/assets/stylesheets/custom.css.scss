@@ -782,6 +782,36 @@
   background-color: #94490C;
   border-color: #94490C;
 }
+
+.sessions-container {
+  padding: 3em 1em;
+}
+
+.sessions-title {
+  color: #CC6510;
+}
+
+.sessions-btn {
+  margin: .5em 0;
+  padding: 0.6em 1.2em;
+  border-radius: 50px;
+  background-color: #CC6510;
+  border-color: #CC6510;
+}
+
+.sessions-btn:hover {
+  background-color: #94490C;
+  border-color: #94490C;
+}
+
+.sessions-link {
+  color: #CC6510;
+}
+
+.sessions-link:hover {
+  color: #CC6510;
+  text-decoration: none;
+}
 //---------PAGINATION----------//
 
 .flickr_pagination {
@@ -1145,16 +1175,16 @@
     border-right: 1px solid lightgrey;
   }
 
-  .phone {
+  .phone-info {
     margin-right: 0.7em;
   }
 
-  .email {
+  .email-info {
     margin-left: 0.7em;
   }
 
-  .phone,
-  .email {
+  .phone-info,
+  .email-info {
     margin-bottom: 0;
     padding: .3em;
   }
@@ -1410,6 +1440,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+
+  .sessions-container {
+    max-width: 700px;
   }
 }
 
