@@ -46,6 +46,12 @@
                   <%= link_to 'Admin Panel', admins_pages_path, class: "nav-link" %>
                 <% end %>
               </div>
+              <div class="admin-panel-link">
+                <% if user_signed_in? %>
+                  <i class="fas fa-cog admin-link-icon"></i>
+                  <%= link_to 'Edytuj', edit_user_registration_path, class: "nav-link" %>
+                <% end %>
+              </div>
               <div class="dropdown-divider"></div>
               <div class="log-out-link">
                 <% if user_signed_in? %>
