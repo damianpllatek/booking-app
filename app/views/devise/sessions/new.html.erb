@@ -1,27 +1,30 @@
-<h2 class="mb-5">Log in</h2>
+<div class="container sessions-container">
+  <h1 class="sessions-title mb-5">Logowanie</h1>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs form-group mb-3">
-    <%= f.input :name,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "username", class: "form-control mb-3" } %>
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email", class: "form-control mb-3" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password", class: "form-control mb-3" } %>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs form-group mb-3">
+      <%= f.input :name,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "username", class: "form-control session-form mb-3" } %>
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email", class: "form-control session-form mb-3" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password", class: "form-control session-form mb-3" } %>
 
-    <div class="form check ml-4">
-      <%= f.input :remember_me, input_html: { class: "form-check-input" }, as: :boolean if devise_mapping.rememberable? %>
+      <div class="form check ml-4">
+        <%= f.input :remember_me, input_html: { class: "form-check-input" }, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+
+      <div class="form-actions mb-3">
+        <%= f.button :submit, "Log in", class: "btn btn-primary sessions-btn" %>
+      </div>
     </div>
+  <% end %>
 
-    <div class="form-actions mb-3">
-      <%= f.button :submit, "Log in", class: "btn btn-primary" %>
-    </div>
-  </div>
-<% end %>
+  <%= render "devise/shared/links" %>
 
-<%= render "devise/shared/links" %>
+</div>
