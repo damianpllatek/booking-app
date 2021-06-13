@@ -32,8 +32,19 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <div class="admin-panel-link">
-                <i class="fas fa-user-cog admin-link-icon"></i>
-                <%= link_to 'Admin panel', admins_pages_path, class: "nav-link" %>
+                <% if user_signed_in? %>
+                  <i class="fas fa-user-circle admin-link-icon" style="display: none"></i>
+                  <%= link_to 'Zaloguj', new_user_session_path, class: "nav-link", style: 'display: none' %>
+                <% else %>
+                  <i class="fas fa-user-circle admin-link-icon"></i>
+                  <%= link_to 'Zaloguj', new_user_session_path, class: "nav-link" %>
+                <% end %>
+              </div>
+              <div class="admin-panel-link">
+                <% if user_signed_in? %>
+                  <i class="fas fa-user-circle admin-link-icon"></i>
+                  <%= link_to 'Admin Panel', admins_pages_path, class: "nav-link" %>
+                <% end %>
               </div>
               <div class="dropdown-divider"></div>
               <div class="log-out-link">
