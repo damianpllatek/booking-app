@@ -5,6 +5,6 @@ class Page < ApplicationRecord
   validates :seo_title, presence: true, length: {minimum: 6, maximum: 250 }
   validates :content, presence: { message: 'Nie może być puste' }, length: { minimum: 10, maximum: 5000 }
 
-  # scope :published, -> { where(state: Page.published).where(title: 'jjjjdfgdfgdfgdfgdfgfddfgggccc') }
-  # scope :unpublished, -> { where(state: Page.unpublished).where(title: 'jjjjdfgdfgdfgdfgdfgfddfgggccc') }
+  scope :published, -> { where(state: 'published') }
+  scope :unpublished, -> { where(state: 'unpublished') }
 end

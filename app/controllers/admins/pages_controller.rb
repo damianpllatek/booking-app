@@ -42,11 +42,11 @@ module Admins
     end
 
     def published
-      @pages = Page.all
+      @pages = Page.all.published
     end
 
     def unpublished
-      @pages = Page.all
+      @pages = Page.all.unpublished
     end
 
     private
