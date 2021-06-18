@@ -41,10 +41,18 @@ module Admins
       redirect_to admins_pages_path, alert: 'Strona została usunięta'
     end
 
+    def published
+      @pages = Page.all
+    end
+
+    def unpublished
+      @pages = Page.all
+    end
+
     private
 
     def page_params
-      params.require(:page).permit(:title, :seo_title, :content, :photo)
+      params.require(:page).permit(:title, :seo_title, :content, :state, :photo)
     end
 
     def find_page
