@@ -14,7 +14,12 @@ Rails.application.routes.draw do
   root 'home#index'
 
   namespace :admins do
-    resources :pages
+    resources :pages do
+      collection do
+        get :published
+        get :unpublished
+      end
+    end
     resources :blogs do
       collection do
         get :test
