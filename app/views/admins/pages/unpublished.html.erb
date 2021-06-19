@@ -1,10 +1,11 @@
 <div class="heading-bg">
   <h1 class="heading-title">Strony</h1>
+  <%= link_to 'Wróć do stron', admins_pages_path, class: "btn btn-light" %>
   <%= link_to 'Stwórz nową stronę', new_admins_page_path, class: "btn btn-primary" %>
 </div>
 
 <div class="container pages-index-container">
-  <h1 class="mb-5">Unpublished</h1>
+  <h1 class="mb-5">Nieopublikowane</h1>
   <% @pages.each do |page| %>
     <div class="card pages-index-card">
       <img src="<%= page.photo %>" class="card-img-top pages-index-img" alt="<%= page.seo_title %>">

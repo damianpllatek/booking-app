@@ -1,5 +1,9 @@
 <div class="heading-bg">
   <h1 class="heading-title">Strony</h1>
+  <div class="heading-button-box">
+    <%= link_to 'Opublikowane', published_admins_pages_path, class: "btn btn-light" %>
+    <%= link_to 'Nieopublikowane', unpublished_admins_pages_path, class: "btn btn-light" %>
+  </div>
   <%= link_to 'Stwórz nową stronę', new_admins_page_path, class: "btn btn-primary" %>
 </div>
 
