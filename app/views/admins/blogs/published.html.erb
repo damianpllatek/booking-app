@@ -1,20 +1,11 @@
 <div class="heading-bg">
   <h1 class="heading-title">Artykuły</h1>
-  <div class="heading-button-box">
-    <%= link_to 'Opublikowane', published_admins_blogs_path, class: "btn btn-light" %>
-    <%= link_to 'Nieopublikowane', unpublished_admins_blogs_path, class: "btn btn-light" %>
-  </div>
-  <%= link_to 'Nowy post', new_admins_blog_path, class: "btn btn-primary" %>
-</div>
-
-<div class="flickr_pagination mt-4 mb-4">
-  <%= will_paginate @pages, :container => false %>
+  <%= link_to 'Wróć do artykułów', admins_blogs_path, class: "btn btn-light" %>
+  <%= link_to 'Stwórz nowy artykuł', new_admins_blog_path, class: "btn btn-primary" %>
 </div>
 
 <div class="container pages-index-container">
-  <div class="flickr_pagination mt-4 mb-4">
-    <%= will_paginate @blogs, :container => false %>
-  </div>
+  <h1 class="mb-5">Opublikowane</h1>
   <% @blogs.each do |blog| %>
     <div class="card pages-index-card">
       <img src="<%= blog.photo %>" class="card-img-top pages-index-img" alt="<%= blog.seo_title %>">
@@ -27,8 +18,4 @@
       </div>
     </div>
   <% end %>
-  <div class="flickr_pagination mt-4 mb-4">
-    <%= will_paginate @blogs, :container => false %>
-  </div>
 </div>
-
