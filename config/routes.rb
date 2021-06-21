@@ -22,6 +22,8 @@ Rails.application.routes.draw do
     end
     resources :blogs do
       collection do
+        get :published
+        get :unpublished
         get :test
       end
     end
