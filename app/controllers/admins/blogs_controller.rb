@@ -47,10 +47,17 @@ module Admins
       @blogs = Blog.first_scope
     end
 
+    def published
+      @blogs = Blog.all.published
+    end
+
+    def unpublished
+      @blogs = Blog.all.unpublished
+    end
     private
 
     def blog_params
-      params.require(:blog).permit(:title, :seo_title, :content, :category_id, :user_id, :views, :photo)
+      params.require(:blog).permit(:title, :seo_title, :content, :category_id, :user_id, :state, :views, :photo)
     end
 
     def find_blog

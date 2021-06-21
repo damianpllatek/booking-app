@@ -9,4 +9,6 @@ class Blog < ApplicationRecord
   validates :content, presence: true, length: { minimum: 10, maximum: 5000 }
 
   scope :first_scope, -> { where(category: Category.first).where(title: 'test123') }
+  scope :published, -> { where(state: 'published') }
+  scope :unpublished, -> { where(state: 'unpublished') }
 end
