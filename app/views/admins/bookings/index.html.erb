@@ -26,6 +26,7 @@
         <p class="card-text">Miasto: <%= booking.city %></p>
         <p class="card-text">Rodo <%= booking.rodo %></p>
         <p class="card-text">Cena: <%= booking.price %></p>
+        <p class="card-text">Status: <%= booking.state %></p>
         <%= link_to 'Zobacz', booking_path(booking), class: "btn btn-success" %>
         <%= link_to 'Edytuj', edit_admins_booking_path(booking), class: "btn btn-primary" %>
         <%= link_to 'Usuń', admins_booking_path(booking), class: "btn btn-danger", method: :delete %>

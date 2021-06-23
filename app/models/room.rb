@@ -14,7 +14,7 @@ class Room < ApplicationRecord
 
     Room.all.each do |room|
       locked_dates = []
-      room.bookings.each do |booking|
+      room.bookings.accepted.each do |booking|
         locked_dates += (booking.start_date.to_date..booking.end_date).map{ |date| date }
       end
 
