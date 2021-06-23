@@ -1,8 +1,8 @@
 <div class="heading-bg">
   <h1 class="heading-title">Artykuły</h1>
   <div class="heading-button-box">
-    <%= link_to 'Opublikowane', published_admins_blogs_path, class: "btn btn-light" %>
-    <%= link_to 'Nieopublikowane', unpublished_admins_blogs_path, class: "btn btn-light" %>
+    <%= link_to 'Opublikowane', admins_blogs_path(state: 'published') , class: "btn btn-light" %>
+    <%= link_to 'Nieopublikowane', admins_blogs_path(state: 'unpublished'), class: "btn btn-light" %>
   </div>
   <%= link_to 'Stwórz nowy artykuł', new_admins_blog_path, class: "btn btn-primary" %>
 </div>
