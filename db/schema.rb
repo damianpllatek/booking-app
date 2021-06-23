@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_20_194022) do
+ActiveRecord::Schema.define(version: 2021_06_23_180919) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_06_20_194022) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "room_id", null: false
+    t.string "state"
     t.index ["room_id"], name: "index_bookings_on_room_id"
   end
 
