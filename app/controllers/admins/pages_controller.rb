@@ -8,7 +8,8 @@ module Admins
     access admin: :all
 
     def index
-      @pages = Page.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+      state_params = params[:state]
+      @pages = Page.where(state: state_params).paginate(page: params[:page], per_page: 5).order('created_at DESC')
     end
 
     def new
@@ -39,14 +40,6 @@ module Admins
       @page.destroy
 
       redirect_to admins_pages_path, alert: 'Strona została usunięta'
-    end
-
-    def published
-      @pages = Page.all.published
-    end
-
-    def unpublished
-      @pages = Page.all.unpublished
     end
 
     private

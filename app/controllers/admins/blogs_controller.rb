@@ -11,7 +11,7 @@ module Admins
 
     def index
       state_params = params[:state]
-      @blogs = Blog.where(state: params[:state]).paginate(page: params[:page], per_page: 5).order('created_at DESC')
+      @blogs = Blog.where(state: state_params).paginate(page: params[:page], per_page: 5).order('created_at DESC')
     end
 
     def new
