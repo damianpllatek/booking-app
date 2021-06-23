@@ -39,7 +39,7 @@ module Admins
     def destroy
       @booking.destroy
 
-      redirect_to admins_booking_path, alert: 'Rezerwacja została usunięta'
+      redirect_to admins_bookings_path, alert: 'Rezerwacja została usunięta'
     end
 
     private

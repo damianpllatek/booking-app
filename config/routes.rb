@@ -36,5 +36,6 @@ Rails.application.routes.draw do
   resources :blogs, only: [:index, :show]
   resources :rooms, only: [:index, :show]
   resources :categories, only: [:index, :show]
-  resources :bookings, only: [:index, :show]
+  resources :bookings, except: [:edit, :update, :destroy]
+  resources :search_results, only: [:index]
 end
