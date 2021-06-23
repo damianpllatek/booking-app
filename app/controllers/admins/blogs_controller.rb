@@ -10,7 +10,8 @@ module Admins
     access admin: :all
 
     def index
-      @blogs = Blog.paginate(page: params[:page], per_page: 5).order('created_at DESC')
+      state_params = params[:state]
+      @blogs = Blog.where(state: params[:state]).paginate(page: params[:page], per_page: 5).order('created_at DESC')
     end
 
     def new
@@ -47,13 +48,6 @@ module Admins
       @blogs = Blog.first_scope
     end
 
-    def published
-      @blogs = Blog.all.published
-    end
-
-    def unpublished
-      @blogs = Blog.all.unpublished
-    end
     private
 
     def blog_params
