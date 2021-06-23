@@ -9,13 +9,20 @@ class Room < ApplicationRecord
   validates :base_price, presence: true
 
   def self.filter_by_search_results(start_date, end_date)
-    query = Room.all
-    # query = query.joins(:bookings).where('(bookings.start_date < ? AND bookings.end_date < ?) OR (bookings.end_date > ? AND bookings.end_date > ?)', start_date.to_date, start_date.to_date, end_date.to_date, end_date.to_date )
-    # Pokój id: 1
-    # Jedna rezerwacja id 1, room id 1
-    # Rezerwacja od 02.05 - 03.05
-    # Jeśli wyszukiwanie = 02.05 - 03.05 to nie powinniśmy tego znaleźć, bo jest zajęty
-    # Jeśłi wyszukiwanie będzie 31-04 - 01.05 to znajdziemy pokój
-    # Jeśli wyszukiwanie będzie 03.05 - 05.05 to znajdziemy pokój
+    requested_dates = (start_date.to_date..end_date.to_date).map{ |date| date }
+    available_room_ids = []
+
+    Room.all.each do |room|
+      locked_dates = []
+      room.bookings.each do |booking|
+        locked_dates += (booking.start_date.to_date..booking.end_date).map{ |date| date }
+      end
+
+      next if (locked_dates & requested_dates).any?
+
+      available_room_ids << room.id
+    end
+
+    Room.where(id: available_room_ids)
   end
 end
