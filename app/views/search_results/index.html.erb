@@ -1,18 +1,22 @@
-<h1>Wyniki wyszukiwania</h1>
+<div class="container pages-index-container pages-index-rooms-container">
+  <h1 class="pages-index-title">Wyniki wyszukiwania</h1>
 
-<h3><%= params[:search_form][:start_date] %> - <%= params[:search_form][:end_date] %></h3>
+  <h3><%= params[:search_form][:start_date] %> - <%= params[:search_form][:end_date] %></h3>
 
-<div class="row mt-3">
-  <% @rooms.each do |room| %>
-    <div class="col-sm-4 mb-3">
-      <div class="card">
-        <img src="<%= room.photo %>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%= room.name %></h5>
-          <p class="card-text"><%= room.description %></p>
-          <%= link_to 'Wybierz', new_booking_path(room_id: room.id, start_date: params[:search_form][:start_date], end_date: params[:search_form][:end_date]), class: 'btn btn-primary', method: :get %>
+  <div class="row mt-3">
+    <% @rooms.each do |room| %>
+      <div class="col-sm-12 col-lg-6 mb-3">
+        <div class="card">
+          <img src="<%= room.photo %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title pages-index-title"><%= room.name %></h5>
+            <p class="card-text pages-index-text"><%= room.description %></p>
+            <p class="card-text pages-index-text">Wielkość: <%= room.size %></p>
+            <p class="card-text pages-index-text">Cena: <%= room.base_price %></p>
+            <%= link_to 'Wybierz', new_booking_path(room_id: room.id, start_date: params[:search_form][:start_date], end_date: params[:search_form][:end_date]), class: 'btn btn-success pages-index-btn', method: :get %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
