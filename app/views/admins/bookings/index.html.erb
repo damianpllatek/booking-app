@@ -32,7 +32,7 @@
         <%= link_to 'Usuń', admins_booking_path(booking), class: "btn btn-danger", method: :delete %>
       </div>
       <div class="card-footer text-muted">
-        2 days ago
+        <%= booking.created_at %>
       </div>
     </div>
   <% end %>
