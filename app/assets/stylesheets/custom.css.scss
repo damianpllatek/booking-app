@@ -49,6 +49,11 @@
   background-color: #94490C;
   border-color: #94490C;
 }
+
+.create-btn:active {
+  background-color: #94490C !important;
+  border-color: #94490C !important;
+}
 //---------- ADMIN NAVIGATION -----------//
 
 .admin-body {
@@ -290,6 +295,12 @@
   border-color: #94490C;
 }
 
+.header-btn:active,
+.about-btn:active {
+  background-color: #94490C !important;
+  border-color: #94490C !important;
+}
+
 .search-form {
   font-weight: bold;
 }
@@ -421,6 +432,13 @@
   background-color: #94490C;
   border-color: #94490C;
 }
+.room-card-btn:active,
+.blog-card-btn:active,
+.attraction-card-btn:active {
+  background-color: #94490C !important;
+  border-color: #94490C !important;
+}
+
 .btn-container {
   margin: 1em 0;
 }
@@ -813,6 +831,11 @@
 .sessions-btn:hover {
   background-color: #94490C;
   border-color: #94490C;
+}
+
+.sessions-btn:active {
+  background-color: #94490C !important;
+  border-color: #94490C !important;
 }
 
 .sessions-link {
