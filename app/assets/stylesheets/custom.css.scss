@@ -50,21 +50,6 @@
   height: auto;
 }
 
-.burger-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  font-size: 26px;
-  background: none;
-  border: 1px solid transparent;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.admin-bars {
-  color: red !important;
-}
-
 .admin-nav {
   position: fixed;
   top: 0;
@@ -1215,7 +1200,7 @@
 
   .navbar-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .logo-container,
