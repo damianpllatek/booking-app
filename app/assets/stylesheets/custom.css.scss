@@ -54,6 +54,15 @@
   background-color: #94490C !important;
   border-color: #94490C !important;
 }
+
+.category-link {
+  font-size: 1.4rem;
+  color: #CC6510;
+}
+.category-link:hover {
+  color: #94490C;
+  text-decoration: none;
+}
 //---------- ADMIN NAVIGATION -----------//
 
 .admin-body {
