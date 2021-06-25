@@ -7,7 +7,9 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
-  def show; end
+  def show
+    @blogs = Blog.where(category_id: params[:id])
+  end
 
   private
 

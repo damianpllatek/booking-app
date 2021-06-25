@@ -1,1 +1,19 @@
-<h1 style="color: tomato"><%= @category.name %></h1>
+
+
+<div class="container pages-index-container">
+  <h1 class="pages-index-title"><%= @category.name %></h1>
+  <% Category.all.each do |category| %>
+    <%= link_to category.name, category_path(category.id), class: 'category-link' %>
+  <% end %>
+  <% @blogs.each do |blog| %>
+    <div class="card pages-index-card">
+      <img src="<%= blog.photo %>" class="card-img-top pages-index-img" alt="<%= blog.seo_title %>">
+      <div class="card-body">
+        <h5 class="card-title pages-index-title"><%= blog.title %></h5>
+        <p class="card-text pages-index-text"><%= blog.content %></p>
+        <%= link_to 'Czytaj dalej', blog_path(blog), class: "btn btn-success pages-index-btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
