@@ -37,6 +37,18 @@
 .error {
   color: #B00100;
 }
+
+.create-btn {
+  padding: .8em 2.8em;
+  border-radius: 50px;
+  background-color: #CC6510;
+  border-color: #CC6510;
+}
+
+.create-btn:hover {
+  background-color: #94490C;
+  border-color: #94490C;
+}
 //---------- ADMIN NAVIGATION -----------//
 
 .admin-body {
@@ -291,6 +303,15 @@
   font-weight: 600;
 }
 
+.user-content-new {
+  padding: 1em;
+}
+
+.user-content-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #CC6510;
+}
 //-----------ABOUT--------------//
 
 .about-container {
@@ -1098,6 +1119,9 @@
     font-size: 1rem;
   }
 
+  .user-content-new {
+    padding: 1em 2em;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1323,6 +1347,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .user-content-new {
+    padding: 1em 4em;
   }
 
   //About
@@ -1595,6 +1623,10 @@
     margin-right: .5em;
     width: 16.6%;
     font-size: .9rem;
+  }
+
+  .user-content-new {
+    padding: 1em 6em;
   }
 }
 
