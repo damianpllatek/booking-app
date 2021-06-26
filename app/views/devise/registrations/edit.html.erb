@@ -5,7 +5,7 @@
     <%= f.error_notification %>
 
     <div class="form-inputs form-group mb-3">
-      <%= f.input :name, required: true, autofocus: true, input_html: { class: "form-control session-form mb-3" } %>
+      <%= f.input :name, required: true, autofocus: true, label: "Nazwa użytkownika", input_html: { class: "form-control session-form mb-3" } %>
       <%= f.input :email, required: true, autofocus: true, input_html: { class: "form-control session-form mb-3" } %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -13,26 +13,26 @@
       <% end %>
 
       <%= f.input :password,
-                  hint: "*leave it blank if you don't want to change it",
-                  required: false,
+                  hint: "*zostaw pusty formularz, jeśli nie chcesz zmieniać hasła",
+                  required: false, label: "Hasło",
                   input_html: { autocomplete: "new-password", class: "form-control session-form mb-3" } %>
       <%= f.input :password_confirmation,
-                  required: false,
+                  required: false, label: "Potwierdź hasło",
                   input_html: { autocomplete: "new-password", class: "form-control session-form mb-3" } %>
       <%= f.input :current_password,
-                  hint: "*we need your current password to confirm your changes",
-                  required: true,
+                  hint: "*wymagane aktualne hasło, aby potwierdzić zmiany",
+                  required: true, label: "Aktualne hasło",
                   input_html: { autocomplete: "current-password", class: "form-control session-form mb-3" } %>
     </div>
 
     <div class="form-actions mb-3">
-      <%= f.button :submit, "Update", class: "btn btn-primary sessions-btn" %>
+      <%= f.button :submit, "Zapisz", class: "btn btn-primary sessions-btn" %>
     </div>
   <% end %>
 
-  <h2 class="sessions-title">Cancel my account</h2>
+  <h2 class="sessions-title">Usuń moje konto</h2>
 
-  <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, class: "sessions-link", method: :delete %></p>
+  <p>Nie zadowolony? <%= link_to "Usuń moje knto", registration_path(resource_name), data: { confirm: "Are you sure?" }, class: "sessions-link", method: :delete %></p>
 
-  <%= link_to "Back", :back, class: "sessions-link" %>
+  <%= link_to "Wróć", :back, class: "sessions-link" %>
 </div>
