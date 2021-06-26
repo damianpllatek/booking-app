@@ -8,15 +8,15 @@
                   autofocus: true,
                   input_html: { autocomplete: "email", class: "form-control session-form mb-3" } %>
       <%= f.input :password,
-                  required: false,
+                  required: false, label: "Hasło",
                   input_html: { autocomplete: "current-password", class: "form-control session-form mb-3" } %>
 
       <div class="form check ml-4">
-        <%= f.input :remember_me, input_html: { class: "form-check-input" }, as: :boolean if devise_mapping.rememberable? %>
+        <%= f.input :remember_me, label: "Pamiętaj mnie", input_html: { class: "form-check-input" }, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
       <div class="form-actions mb-3">
-        <%= f.button :submit, "Log in", class: "btn btn-primary sessions-btn" %>
+        <%= f.button :submit, "Zaloguj", class: "btn btn-primary sessions-btn" %>
       </div>
     </div>
   <% end %>

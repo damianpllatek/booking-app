@@ -6,21 +6,21 @@
 
     <div class="form-inputs form-group mb-3">
       <%= f.input :name, required: true,
-                  autofocus: true,
+                  autofocus: true, label: "Nazwa użytkownika",
                   input_html: { autocomplete: "username", class: "form-control session-form mb-3" }%>
       <%= f.input :email, required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email", class: "form-control session-form mb-3" }%>
       <%= f.input :password,
-                  required: true,
+                  required: true, label: "Hasło",
                   input_html: { autocomplete: "new-password", class: "form-control session-form mb-3" } %>
       <%= f.input :password_confirmation,
-                  required: true,
+                  required: true, label: "Potwierdź hasło",
                   input_html: { autocomplete: "new-password", class: "form-control session-form mb-3" } %>
     </div>
 
     <div class="form-actions mb-3">
-      <%= f.button :submit, "Sign up", class: "btn btn-primary sessions-btn" %>
+      <%= f.button :submit, "Zaloguj", class: "btn btn-primary sessions-btn" %>
     </div>
   <% end %>
 
