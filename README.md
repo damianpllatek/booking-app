@@ -49,5 +49,5 @@ Opis konfiguracji środowiska i uruchomienia projektu:
 
 8. Logowanie w panelu administratora poprzez link w nawigacji strony.
    Dane logowania:
-   email: admin@example.com
+   email: admin@example.com <br>
    hasło: admin123
