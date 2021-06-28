@@ -48,6 +48,6 @@ Opis konfiguracji środowiska i uruchomienia projektu:
    -> http://localhost:3000
 
 8. Logowanie w panelu administratora poprzez link w nawigacji strony.
-   Dane logowania:
+   Dane logowania:<br>
    email: admin@example.com <br>
    hasło: admin123
